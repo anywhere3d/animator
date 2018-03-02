@@ -1,0 +1,3850 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Mobirise v3.12.1, mobirise.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/images/anywhere3d-logo-girl-128x128-1.png" type="image/x-icon">
+    <meta name="description" content="anywhere animator app">
+    <title>Animator Editor v0.1.1.4</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="/assets/bootstrap-material-design-font/css/material.css">
+    <link rel="stylesheet" href="/assets/tether/tether.min.css">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/dropdown/css/style.css">
+    <link rel="stylesheet" href="/assets/animate.css/animate.min.css">
+    <link rel="stylesheet" href="/assets/theme/css/style.css">
+    <link rel="stylesheet" href="/assets/mobirise/css/mbr-additional.css">
+    <link rel="stylesheet" href="/css/side-panels.css">
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/bootstrap/js/fileinput.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/bootstrap/js/bootbox.min.js"></script>
+
+</head>
+
+<body>
+<section id="ext_menu-13">
+
+    <nav class="navbar navbar-dropdown navbar-fixed-top">
+        <div class="container">
+
+            <div class="mbr-table">
+                <div class="mbr-table-cell">
+
+                    <div class="navbar-brand">
+                        <a href="/" class="navbar-logo"><img src="/assets/images/anywhere3d-logo-girl-1-128x128.png" alt="anywhere3d logo"></a>
+                        <a class="navbar-caption" href="/dashboard" target="_blank">animation editor</a>
+                    </div>
+
+                </div>
+                <div class="mbr-table-cell">
+
+                    <button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                        <div class="hamburger-icon"></div>
+                    </button>
+
+                    <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar">
+                        <li class="nav-item"><a class="nav-link link" href="#">OVERVIEW</a></li>
+                        <li class="nav-item"><a class="nav-link link" href="#">FEATURES</a></li>
+                        <li class="nav-item"><a class="nav-link link" href="#">HELP</a></li>
+                        <li class="nav-item nav-btn"><a class="nav-link btn btn-white btn-white-outline" href="#">DOWNLOAD</a></li>
+                        <li class="nav-item nav-btn"><a class="nav-link btn btn-white btn-white-outline" href="#">SAVE</a></li>
+                        <li class="nav-item nav-btn"><a class="nav-link btn btn-primary" href="#">PUBLISH</a></li>
+                        <li class="nav-item nav-btn"><a class="nav-link btn btn-white btn-white-outline" href="/default/login">LOGIN</a></li>
+                    </ul>
+                    <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                        <div class="close-icon"></div>
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+</section>
+
+<section class="engine"><a rel="external" href="https://anywhere3d.com/animator/editor/v/0.1.1.4">animator-editor-v.0.1.1.4</a></section>
+
+<section class="mbr-section mbr-after-navbar" id="msg-box7-z" style="background-color:rgba(0,0,0,1); padding-top:380px; padding-bottom:380px; overflow:hidden;">
+
+    <div id="render-container" class="mbr-overlay" style="opacity:1; background-color:rgb(0,0,0);"></div>
+<!-- 
+    <link rel="stylesheet" type="text/css" href="/css/buttons.css">
+	<link rel="stylesheet" type="text/css" href="/css/spinner.css">
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/menu-menubar.css">
+ -->
+
+	<style type="text/css" id="side-panels-css">
+        #left-side  *, 
+        #right-side * { box-sizing:border-box; -moz-box-sizing:border-box; font-family:'Arial', sans-serif; font-weight:normal;}
+        #left-side { left:0px; top:0px; bottom:0px; -webkit-transform:translateX( -380px ); }
+    	#right-side { right:0px; top:0px; bottom:0px; -webkit-transform: translateX( 380px ); }
+        #left-side, 
+        #right-side { 
+            position:absolute; color:#eee; font-size:13px;
+            background-color:rgba(0,0,0,0.4); width:452px; line-height:1.4em;
+            -webkit-transition: -webkit-transform 500ms ease-out;
+        }
+    	#left-side:hover, 
+        #left-side.pinned,
+        #right-side:hover, 
+        #right-side.pinned { -webkit-transform: translateX(0); }
+    	#left-side-content { 
+            position:absolute; right:52px; top:30px; left:0px; bottom:0px; 
+            padding:20px 20px 20px 20px; overflow:hidden; 
+        }
+        #right-side-content {
+            position:absolute; left:52px; top:30px; right:10px; bottom:0px; 
+            padding: 20px 20px 20px 20px; overflow:auto; 
+        }
+    	.reset-container a:link    {color:#ccf; text-decoration:initial;}
+        .reset-container a:visited {color:#ccf; text-decoration:initial;}
+        .reset-container a:hover   {color:#0f0; text-decoration:initial;}
+        .reset-container a:active  {color:#f00; text-decoration:initial;}
+    	/* a { color:white; text-shadow:0 1px 0 rgba(0,0,0,0.5) } */
+    	#left-side h1, 
+        #right-side h1 { margin-bottom:10px; font-size:14px;}
+    	#left-side h2, 
+        #right-side h2 { font-size:11px; margin-bottom:5px;}
+    	#left-side p, 
+        #right-side p  { font-size:13px; }
+        .btn-light, 
+        .btn-escape, 
+        .btn-helper    { width:32px; height:32px; opacity:1; background:rgba(255,255,255,0); }
+        .block         { margin-bottom:10px; float:left; width:280px; }
+        .button:hover, 
+        .button:active { background-position:0px -2px; }
+    </style>
+
+    <style type="text/css" id="v3-dynamic-sliders-css">
+        /*#droplist-bones { position:absolute; left:150px; width:200px; font-size:15px; }*/
+        #bone-label { position:absolute; left:0px; right:0px; top:0px; font-size:1.5em; text-align:center; }
+        .control-container { 
+            left:0px; right:0px; margin-bottom:10px; padding:10px; 
+            color: #ffffff; border:2px solid #ffffff; border-radius:10px; 
+        }
+        .slider-row { padding-left:10px; padding-right:5px; margin-bottom:4px;}
+        .dynamic-label  { position:absolute; width:18%; font-size:11px; padding-top:2px; }
+        .dynamic-slider { width:60%; margin-left:20%; }
+        .dynamic-output { 
+            position:absolute; margin-right:20px; width:18%; 
+            color:#ffffff; border:none; background-color:rgba(255,255,255,0); 
+            font-weight:bold; font-size:1.5em; text-align:right; 
+        }
+        .reset-container {padding:1px; margin-bottom:10px; font-weight:bold; text-align:right;}
+    </style>
+
+    <style>
+        .form-control { min-height:1em; }
+        .form-group { margin-bottom:0px; }
+        .btn-success, .btn-success:hover { background-color:#006900; border-color:#006900; }
+        /* #import-pose, #import-skinned, #import-animation { margin-bottom:10px; } color:#dddddd; font-family:'Arial', sans-serif; font-size:1.2em; min-height:1em; letter-spacing:0px;*/
+        #pose-export >  div > div > a, #anim-export >  div > div > a, #animation-import > div > div > a,
+        #skinned-avatar > div > div > a, #skinned-import > div > div > a { color:#dddddd; font-family:'Arial', sans-serif; font-size:1.2em; margin-bottom:10px; }
+        #pose-export > div > div > a:hover, #animation-import > div > div > a:hover,  #anim-export > div > div > a:hover, 
+        #random-pose > div > div > a:hover, #skinned-avatar > div > div > a:hover { color:blue; font-weight:bold; }
+        #reset-position:hover, #reset-rotation:hover, #reset-scale:hover, #avatar-helper:hover, #bones-helper:hover, #reset-pose:hover { color:aqua; font-weight:bold; }
+        #reset-position:active, #reset-rotation:active, #reset-scale:active, #avatar-helper:active, #bones-helper:active, #reset-pose:active { color:lawngreen; font-weight:bold; }
+        #random-pose >  div > div > a { color:#dddddd; font-family:'Arial', sans-serif; font-size:1.2em; margin-top:10px; }
+    </style>
+    
+    <div id="left-side" style="top:80px; bottom:0px;">
+        <div id="left-side-pinbtn"></div>
+        <div id="left-side-content">
+            
+            <!-- LEFT SIDE PANEL CONTENTS -->
+            <div class="control-container" style="border:none; font-size:1.8em;">
+                Animation Settings
+            </div>
+            
+            <!-- <div class="reset-container"></div> -->
+
+            <div id="animation-options" class="control-container" style="border:none;">
+                <div class="slider-row">
+                    <label class="dynamic-label">Duration:</label>
+                    <input type="range" id="duration-slider" class="dynamic-slider" min="-1" max="1" value="0" step="0.1">
+                    <input type="number" id="duration-output" min="1" max="5" value="3" class="dynamic-output" step="0.1">
+                </div>
+                <div class="slider-row">
+                    <label class="dynamic-label">Play&nbsp;Speed:</label>
+                    <input type="range" id="scl-time-slider" class="dynamic-slider" min="0" max="2" value="1" step="0.1">
+                    <input type="number" id="scl-time-output" value="1" class="dynamic-output" step="0.1">
+                </div>
+                <div class="slider-row" style="font-size:1.5em;">
+                    <label>Loop&nbsp;</label>
+                    <input type="checkbox" id="animation-loop" name="loop" checked>
+                </div>
+                <div class="slider-row" style="font-size:15px;">
+                    <input type="text" id="animation-name" class="form-control" maxLength="128" placeholder="animation name" style="margin-bottom:10px;" required>
+                    <span id="help-text" class="help-block"></span>
+                    <span id="error-text" class="help-block"></span>
+                </div>
+
+            <!-- <div id="animation-options" class="control-container" style="border:none;"> -->
+            
+                <div id="skinned-avatar" class="form-group">
+                    <div class="slider-row" style="font-size:1.5em;">
+                        <label style="margin-top:10px;">Select model:</label>
+                    </div>
+                    <div class="nav-dropdown collapse pull-xs-left nav navbar-nav" style="font-family:'Arial',sans-serif; font-size:1em;">
+                        <div class="nav-item nav-btn"><a href="#" id="load-male" class="nav-link btn btn-white btn-white-outline">Male</a></div>
+                        <div class="nav-item nav-btn"><a href="#" id="load-female" class="nav-link btn btn-white btn-white-outline">Female</a></div>
+                        <div class="nav-item nav-btn"><a href="#" id="load-skeleton" class="nav-link btn btn-white btn-white-outline">Skeleton</a></div>
+                    </div>
+                </div>
+    
+                <!-- <div class="reset-container"><span style="width:100%;">&nbsp;</span></div> -->
+            <!-- 
+                <div id="skinned-import" class="form-group">
+                    <div class="slider-row"><label>Import skinned model:</label></div>
+                    <div class="nav-dropdown collapse pull-xs-left nav navbar-nav" style="font-family:'Arial',sans-serif; font-size:1em; width:100%">
+                        <input type="file" id="load-skinned" style="display:none;" onchange="loadJsonSkinnedAnimatedMesh(event);">
+                        <div class="nav-item nav-btn">
+                            <a href="#" id="import-skinned" class="nav-link btn btn-white btn-white-outline">Import&nbsp;Skinned&nbsp;Mesh</a>
+                        </div>
+                    </div>
+                </div>
+             -->
+                <div id="animation-import" class="form-group">
+                    <div class="slider-row" style="font-size:1.5em;"><label style="margin-top:10px;">Import file:</label></div>
+                    <div class="nav-dropdown collapse pull-xs-left nav navbar-nav" style="font-family:'Arial',sans-serif; font-size:1em;">
+                        <input type="file" id="load-pose" style="display:none;">
+                        <div class="nav-item nav-btn">
+                            <a href="#" id="import-pose" class="nav-link btn btn-white btn-white-outline">Pose</a>
+                        </div>
+                    <!-- 
+                        <input type="file" id="load-skinned" style="display:none;">
+                        <div class="nav-item nav-btn">
+                            <a href="#" id="import-skinned" class="nav-link btn btn-white btn-white-outline">Skinned</a>
+                        </div>
+                     -->
+                        <input type="file" id="load-data" style="display:none;">
+                        <div class="nav-item nav-btn">
+                            <a href="#" id="import-animation" class="nav-link btn btn-white btn-white-outline">Animation</a>
+                        </div>
+                        <input type="file" id="load-bvh" style="display:none;">
+                        <div class="nav-item nav-btn">
+                            <a id="import-bvh" class="nav-link btn btn-white btn-white-outline">BVH</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- <div class="reset-container"><span style="width:100%;">&nbsp;</span></div> -->
+
+                <div id="pose-export" class="form-group">
+                    <div class="slider-row" style="font-size:1.5em;"><label style="margin-top:10px;">Save/Export Pose:</label></div>
+                    <div class="nav-dropdown collapse pull-xs-left nav navbar-nav" style="font-family:'Arial',sans-serif; font-size:1em;">
+                        <div class="nav-item nav-btn"><a href="#" id="download-pose" class="nav-link btn btn-white btn-white-outline">Download Pose</a></div>
+                        <div class="nav-item nav-btn"><a href="#" id="save-pose" class="nav-link btn btn-white btn-white-outline">Save Pose</a></div>
+                    </div>
+                </div>
+                
+                <div id="anim-export" class="form-group">
+                    <div class="slider-row" style="font-size:1.5em;"><label style="margin-top:10px;">Save/Export Animation:</label></div>
+                    <div class="nav-dropdown collapse pull-xs-left nav navbar-nav" style="font-family:'Arial',sans-serif; font-size:1em;">
+                        <div class="nav-item nav-btn"><a href="#" id="download-animation" class="nav-link btn btn-success">Download Anim</a></div>
+                        <div class="nav-item nav-btn"><a href="#" id="save-animation" class="nav-link btn btn-success">Save Anim</a></div>
+                    </div>
+                </div>
+                
+                <!-- <div class="reset-container"><span style="width:100%;">&nbsp;</span></div> -->
+                
+                <div id="random-pose" class="form-group">
+                    <div class="nav-dropdown collapse pull-xs-left nav navbar-nav" style="font-family:'Arial',sans-serif; font-size:1em; width:100%;">
+                        <div class="nav-item nav-btn" style="padding:0px;">
+                            <a href="#" id="crazy-pose" class="btn btn-white btn-white-outline" style="position:absolute; left:45px; right:45px; padding:6.8px;">Crazy&nbsp;Pose</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+
+
+
+    <div id="right-side" style="top:80px; bottom:0px;">
+        <div id="right-side-pinbtn"></div>
+        <div id="right-side-content">
+
+            <!-- RIGHT SIDE PANEL CONTENTS -->
+            <select class="form-control" id="droplist-bones" style="line-height:1em; min-height:1em;" onchange="newCurrentBoneSelected();">
+                <option value="" selected>Select Bone</option>
+                <option value="Head">Head</option>
+                <option value="Neck">Neck</option>
+                <option value="Torso">Torso</option>
+                <option value="Hip">Hip</option>
+                <option value="Arms">Arms</option>
+                <option value="Legs">Legs</option>
+            </select>
+            
+            <div class="reset-container">&nbsp;</div>
+            
+            <div id="position-sliders" class="control-container" style="border:none;">
+                <div class="slider-row">
+                    <label for="pos-slider-x" id="pos-label-x" class="dynamic-label">position&nbsp;<strong>x:</strong></label>
+                    <input type="range" id="pos-slider-x" class="dynamic-slider" min="-1" max="1" value="0" step="0.01">
+                    <input type="number" id="pos-output-x" class="dynamic-output" value="0" step="0.01">
+                </div>
+                <div class="slider-row">
+                    <label for="pos-slider-y" id="pos-label-y" class="dynamic-label">position&nbsp;<strong>y:</strong></label>
+                    <input type="range" id="pos-slider-y" class="dynamic-slider" min="-1" max="1" value="0" step="0.01">
+                    <input type="number" id="pos-output-y" class="dynamic-output" value="0" step="0.01">
+                </div>
+                <div class="slider-row">
+                    <label for="pos-slider-z" id="pos-label-z" class="dynamic-label">position&nbsp;<strong>z:</strong></label>
+                    <input type="range" id="pos-slider-z" class="dynamic-slider" min="-1" max="1" value="0" step="0.01">
+                    <input type="number" id="pos-output-z" class="dynamic-output" value="0" step="0.01">
+                </div>
+            </div>
+            
+            <div class="reset-container">
+                <a href="#"><span id="reset-position" onclick="bonesResetPosition(avatar);">Reset all bones position</span></a>
+            </div>
+            
+            <div id="rotation-sliders" class="control-container" style="border:none;">
+                <div class="slider-row">
+                    <label for="rot-slider-x" id="rot-label-x" class="dynamic-label">rotation&nbsp;<strong>x:</strong></label>
+                    <input type="range" id="rot-slider-x" class="dynamic-slider" min="-1" max="1" value="0" step="0.01">
+                    <input type="number" id="rot-output-x" class="dynamic-output" value="0" step="0.01">
+                </div>
+                <div class="slider-row">
+                    <label for="rot-slider-y" id="rot-label-y" class="dynamic-label">rotation&nbsp;<strong>y:</strong></label>
+                    <input type="range" id="rot-slider-y" class="dynamic-slider" min="-1" max="1" value="0" step="0.01">
+                    <input type="number" id="rot-output-y" class="dynamic-output" value="0" step="0.01">
+                </div>
+                <div class="slider-row">
+                    <label for="rot-slider-z" id="rot-label-z" class="dynamic-label">rotation&nbsp;<strong>z:</strong></label>
+                    <input type="range" id="rot-slider-z" class="dynamic-slider" min="-1" max="1" value="0" step="0.01">
+                    <input type="number" id="rot-output-z" class="dynamic-output" value="0" step="0.01">
+                </div>
+            </div>
+            
+            <div class="reset-container">
+                <a href="#"><span id="reset-rotation" onclick="bonesResetQuaternion(avatar);">Reset all bones rotation</span></a>
+            </div>
+            
+            <div id="scale-uniform" class="control-container" style="border:none;">
+                <div class="slider-row">
+                    <label for="scl-uniform-slider" class="dynamic-label">Scale <strong>xyz:</strong></label>
+                    <input type="range" id="scl-uniform-slider" min="-1" max="1" value="0" class="dynamic-slider" step="0.01">
+                    <input type="number" id="scl-uniform-output" value="0" class="dynamic-output" step="0.01">
+                </div>
+            </div>
+            
+            <div class="reset-container">
+                <a href="#"><span id="reset-scale" onclick="bonesResetScale(avatar);">Reset all bones scale</span></a>
+            </div>
+            
+            <div id="scale-sliders" class="control-container" style="border:none;">
+                <div class="slider-row">
+                    <label for="scl-slider-x" id="scl-label-x" class="dynamic-label">scale&nbsp;<strong>x:</strong></label>
+                    <input type="range" id="scl-slider-x" class="dynamic-slider" min="-1" max="1" value="0" step="0.01">
+                    <input type="number" id="scl-output-x" class="dynamic-output" value="0" step="0.01">
+                </div>
+                <div class="slider-row">
+                    <label for="scl-slider-y" id="scl-label-y" class="dynamic-label">scale&nbsp;<strong>y:</strong></label>
+                    <input type="range" id="scl-slider-y" class="dynamic-slider" min="-1" max="1" value="0" step="0.01">
+                    <input type="number" id="scl-output-y" class="dynamic-output" value="0" step="0.01">
+                </div>
+                <div class="slider-row">
+                    <label for="scl-slider-z" id="scl-label-z" class="dynamic-label">scale&nbsp;<strong>z:</strong></label>
+                    <input type="range" id="scl-slider-z" class="dynamic-slider" min="-1" max="1" value="0" step="0.01">
+                    <input type="number" id="scl-output-z" class="dynamic-output" value="0" step="0.01">
+                </div>
+            </div>
+            
+            <div class="reset-container">
+                <a href="#"><span id="avatar-helper">Show/Hide Avatar</span></a>&nbsp;&nbsp;&nbsp;
+                <a href="#"><span id="bones-helper">Show/Hide Bones</span></a>&nbsp;&nbsp;&nbsp;
+                <a href="#"><span id="rest-pose">Rest&nbsp;Pose</span></a>
+            </div>
+            
+        </div>
+    </div>   
+
+    <!-- <div class="container" id="animator-container"></div> -->
+    <!-- <div class="form-group" id="animation-buttons"></div> -->
+
+</section>
+
+<footer class="mbr-small-footer mbr-section mbr-section-nopadding mbr-after-navbar" id="footer1-14" style="background-color:rgb(27, 27, 27); padding-top:0.5rem; padding-bottom:4.5rem;">
+
+    <div class="container" style="height:90px;">
+        <div id="time-container" style="border:0px solid #ff0000;">time container</div>
+        <div id="keys-container" style="position:absolute; top:7px; left:15px; right:15px; border:1px solid #ffff00; font-family:'Arial'; font-size:1em;"></div>
+        <input type="range" id="slider-timer" class="timer-slider form-control" min="0" max="3" value="0" step="0.1" style="padding:0.5em 0;">
+        
+        <style>
+            #timer-container > div > div > a { font-family:'Arial', sans-serif; font-size:0.9em; }
+            #timer-container > div > div { color:#dddddd; font-family:'Arial', sans-serif; font-size:1.3em; }
+            /*#output-timer { color:#ffffff; font-family:'Arial', sans-serif; font-size:1.5em;}*/
+            #delete-framekey:hover {color:red;}
+            #animation-add:hover  {color:darkgreen;}
+            #animation-play:hover {color:blue;}
+            .timer-output { 
+                width:2em; color:#ffffff; border:none; background-color:rgba(255,255,255,0); 
+                font-family:'Arial', sans-serif; font-weight:bold; font-size:1.5em; text-align:right; 
+            }
+        </style>
+        
+        <div class="form-group" id="timer-container">
+            <div class="nav-dropdown collapse pull-xs-left nav navbar-nav" style="font-family:'Arial',sans-serif; font-size:1em;">
+                <div class="nav-item nav-btn"><a href="#" id="delete-framekey" class="nav-link btn btn-white btn-white-outline">Delete Key</a></div>
+                <div class="nav-item nav-btn"><input type="checkbox" id="manual-play" name="manual"></div>
+                <div class="nav-item nav-btn">manual&nbsp;</div>
+                <div class="nav-item nav-btn"><a href="#" id="add-framekey" class="nav-link btn btn-white btn-white-outline">Add Key</a></div>
+                <div class="nav-item nav-btn" id="status-messager" style="color:darkorange; border:0px solid #ffffff;">Paused</div>
+                <div class="nav-item nav-btn"><a href="#" id="animation-play" class="nav-link btn btn-white btn-white-outline">Play</a></div>
+                <div class="nav-item nav-btn">Time:&nbsp;</div>
+                <!-- <div class="nav-item nav-btn"><output for="slider-timer" class="timeroutput" id="output-timer">0</output></div> -->
+                <div class="nav-item nav-btn"><input type="number" id="output-timer" class="timer-output" min="1" max="3" value="0"  step="0.1"></div>
+                <div class="nav-item nav-btn"><p class="text-xs-center" id="copyright" style="font-size:1em;">Copyright &copy; 2016-1017 anywhere3d.com</p></div>
+            </div>
+        </div>
+        
+        <!-- <p class="text-xs-center" id="status-messager" style="border:1px solid #ff0000; font-size:1.3em;">Status messager</p> -->
+        <!-- <p class="text-xs-center" id="copyright" style="border:0px solid #ffffff;">Copyright &copy; 2016-1017 anywhere3d.com</p> -->
+    </div>
+    
+</footer>
+
+
+<div style="display:none;">
+    <img id="skybox-posx" class="skybox-img" src="/skyboxes/skybox/posx.jpg">
+    <img id="skybox-posy" class="skybox-img" src="/skyboxes/skybox/posy.jpg">
+    <img id="skybox-posz" class="skybox-img" src="/skyboxes/skybox/posz.jpg">
+    <img id="skybox-negx" class="skybox-img" src="/skyboxes/skybox/negx.jpg">
+    <img id="skybox-negy" class="skybox-img" src="/skyboxes/skybox/negy.jpg">
+    <img id="skybox-negz" class="skybox-img" src="/skyboxes/skybox/negz.jpg">
+</div>
+
+<script src="/assets/web/assets/jquery/jquery.min.js"></script>
+<script src="/assets/tether/tether.min.js"></script>
+<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="/assets/smooth-scroll/smooth-scroll.js"></script>
+<script src="/assets/dropdown/js/script.min.js"></script>
+<script src="/assets/touch-swipe/jquery.touch-swipe.min.js"></script>
+<script src="/assets/viewport-checker/jquery.viewportchecker.js"></script>
+<script src="/assets/theme/js/script.js"></script>
+
+<script src="/three/r78/js/three.js"></script>
+<script src="/three/r78/js/EditorControls.js"></script>
+<script src="/three/r78/js/Detector.js"></script>
+<script src="/three/r78/js/renderers/Projector.js"></script>
+<script src="/three/r78/js/KeyboardState.js"></script>
+<script src="/three/r78/js/loaders/collada/Animation.js"></script>
+<script src="/three/r78/js/loaders/collada/AnimationHandler.js"></script>
+<script src="/three/r78/js/loaders/collada/KeyFrameAnimation.js"></script>
+
+<script src="/js/SceneHelpers.js"></script>
+<script src="/js/UserUtilities.js"></script>
+<script src="/js/HttpUtilities.js"></script>
+<script src="/js/LightControls.js"></script>
+<script src="/js/EdgesHelper.js"></script>
+
+<!-- script src="/js/BVHImport.js"></script -->
+
+<script>
+/*
+     Ivo Herzig, 2016
+     MIT License
+    
+     A JavaScript parser for BVH files and converter to Three.js animation.
+*/
+    
+    var BVHImport = new function() {
+    
+        var animationData = {"name":null, "fps":null, "length":null, "hierarchy":[]};
+    //  Prepear animationData for first init animation keys.
+        for (var i in avatar.skeleton.bones) {
+            animationData.hierarchy.push({"keys":[]});
+            var initAnimationKey = {"pos":[0,0,0], "rot":[0,0,0,1], "scl":[1,1,1], "time":0};
+            initAnimationKey.pos = avatar.skeleton.bones[i].position.toArray();
+            initAnimationKey.rot = avatar.skeleton.bones[i].quaternion.toArray();
+            initAnimationKey.scl = avatar.skeleton.bones[i].scale.toArray();
+            animationData.hierarchy[i].keys.push(initAnimationKey);
+        }
+        console.log( "Animation Data created:", animationData );
+    
+    
+    
+    
+	/*
+		converts a bvh skeletal animation definition to THREE.Bones
+		and a THREE.AnimationClip
+
+		bone: bvh bone hierarchy including keyframe data (as produced by BVHImport.readBvh)
+
+		returns an object containing a THREE.Skeleton and a THREE.AnimationClip
+		({ skeleton: THREE.Skeleton, clip: THREE.AnimationClip })
+	*/
+	
+    	this.toTHREE = function (bone) {
+    	
+    		var threeBones = [];
+    		toTHREEBone(bone, threeBones);
+    	
+    		return {
+    			skeleton: new THREE.Skeleton(threeBones),
+    			clip: toTHREEAnimation(bone)
+    		};
+    	};
+    	
+	/*
+		converts the internal bvh node structure to a THREE.Bone hierarchy
+
+		source: the bvh root node
+		list: pass an empty array, will contain a flat list of all converte THREE.Bones
+
+		returns the root THREE.Bone
+	*/
+    	function toTHREEBone(source, list) {
+    		var bone = new THREE.Bone();
+    		list.push(bone);
+    		bone.position.add(source.offset);
+    		bone.name = source.name;
+    	
+    		if (source.type != "ENDSITE")  {
+    			for (var i = 0; i < source.children.length; ++i) {
+    				bone.add(toTHREEBone(source.children[i], list));
+    			}
+    		}
+    	
+    		return bone;
+    	}
+    	
+	/* 
+		builds a THREE.AnimationClip from the keyframe data saved in the bone.
+
+		bone: bvh root node
+
+		returns: a THREE.AnimationClip containing position and quaternion tracks
+	*/
+	
+    	function toTHREEAnimation(bone) {
+    	
+    		var bones = [];
+    		flatten(bone, bones);
+    	
+    		var tracks = [];
+    	
+    		// create a position and quaternion animation track for each node
+    		for (var i = 0; i < bones.length; ++i) { 
+    			var b = bones[i];
+    	
+    			if (b.type == "ENDSITE")
+    				continue;
+    			
+    			// track data
+    			var times = [];
+    			var positions = [];
+    			var rotations = [];
+    	
+    			for (var j = 0; j < b.frames.length; ++j) { 
+    				var f = b.frames[j];
+    				times.push(f.time);
+    				positions.push(f.position.x + b.offset.x);
+    				positions.push(f.position.y + b.offset.y);
+    				positions.push(f.position.z + b.offset.z);
+    	
+    				rotations.push(f.rotation.x);
+    				rotations.push(f.rotation.y);
+    				rotations.push(f.rotation.z);
+    				rotations.push(f.rotation.w);
+    			}
+    	
+    			tracks.push(new THREE.VectorKeyframeTrack(
+    				".bones["+b.name+"].position", times, positions));
+    	
+    			tracks.push(new THREE.QuaternionKeyframeTrack(
+    				".bones["+b.name+"].quaternion", times, rotations));
+    		}
+    	
+    		var clip = new THREE.AnimationClip("animation", -1, tracks);
+    	
+    		return clip;
+    	}
+    
+    
+	/*
+		reads a BVH file
+	*/
+    	this.readBvh = function(lines) {
+    	
+    		// read model structure
+    		if (lines.shift().trim().toUpperCase() != "HIERARCHY")
+    			throw "HIERARCHY expected";
+    	
+    		var list = [];
+    		var root = BVHImport.readNode(lines, lines.shift().trim(), list);
+    	
+    		// read motion data
+    		if (lines.shift().trim().toUpperCase() != "MOTION")
+    			throw "MOTION  expected";
+    	
+    		var tokens = lines.shift().trim().split(/[\s]+/);
+    		
+    		// number of frames
+    		var numFrames = parseInt(tokens[1]);
+    		if (isNaN(numFrames))
+    			throw "Failed to read number of frames.";
+    	
+    		// frame time
+    		tokens = lines.shift().trim().split(/[\s]+/);
+    		var frameTime = parseFloat(tokens[2]);
+    		if (isNaN(frameTime))
+    			throw "Failed to read frame time.";
+    	
+    		// read frame data line by line
+    		for (var i = 0; i < numFrames; ++i) {
+    			tokens = lines.shift().trim().split(/[\s]+/);
+    	
+    			BVHImport.readFrameData(tokens, i*frameTime, root, list);
+    		}
+    	
+    	    debugMode && console.log("root:", root);
+    	
+    		return root;
+    	}
+    
+	/*
+    	 Recursively parses the HIERACHY section of the BVH file
+    		
+    	 - lines: all lines of the file. lines are consumed as we go along.
+    	 - firstline: line containing the node type and name e.g. "JOINT hip"
+    	 - list: collects a flat list of nodes
+    	
+    	 returns: a BVH node including children
+	*/
+    	this.readNode  = function(lines, firstline, list) {
+    		var node = {name: "", type: "", frames: []};
+    		list.push(node);
+    	
+    		// parse node tpye and name.
+    		var tokens = firstline.trim().split(/[\s]+/) 
+    	
+    		if (tokens[0].toUpperCase() === "END" && tokens[1].toUpperCase() === "SITE") {
+    			node.type = "ENDSITE";
+    		  node.name = "ENDSITE"; // bvh end sites have no name
+    		}
+    		else {
+    	  	node.name = tokens[1];
+    			node.type = tokens[0].toUpperCase();
+    		}
+    	
+    		// opening bracket
+    		if (lines.shift().trim() != "{")
+    			throw "Expected opening { after type & name";
+    	
+    		// parse OFFSET 
+    		tokens = lines.shift().trim().split(/[\s]+/);
+    	
+    		if (tokens[0].toUpperCase() != "OFFSET")
+    			throw "Expected OFFSET, but got: " + tokens[0];	
+    		if (tokens.length != 4)
+    			throw "OFFSET: Invalid number of values";
+    	
+    		var offset = { 
+    			x: parseFloat(tokens[1]), y: parseFloat(tokens[2]), z: parseFloat(tokens[3]) };
+    	
+    		if (isNaN(offset.x) || isNaN(offset.y) || isNaN(offset.z))
+    			throw "OFFSET: Invalid values";
+    	
+    		node.offset = offset;
+    	
+    		// parse CHANNELS definitions
+    		if (node.type != "ENDSITE") {
+    			tokens = lines.shift().trim().split(/[\s]+/);
+    			
+    			if (tokens[0].toUpperCase() != "CHANNELS")
+    				throw "Expected CHANNELS definition";
+    	
+    			var numChannels = parseInt(tokens[1]);
+    			node.channels = tokens.splice(2, numChannels);
+    			node.children = [];
+    		}
+    	
+    	  // read children
+    		while (true) { 
+    			var line = lines.shift().trim();
+    	
+    	    if (line == "}") {
+    	        debugMode && console.log("node:", node);
+    	    	return node;
+    	    } else {
+    	    	node.children.push(BVHImport.readNode(lines, line, list));
+    	    }
+    	  }
+    	  
+    	}
+    
+	/*
+		 Recursively reads data from a single frame into the bone hierarchy.
+		 The bone hierarchy has to be structured in the same order as the BVH file.
+		 keyframe data is stored in bone.frames.
+	
+		 - data: splitted string array (frame values), values are shift()ed so
+		 this should be empty after parsing the whole hierarchy.
+		 - frameTime: playback time for this keyframe.
+		 - bone: the bone to read frame data from.
+	*/
+
+    	this.readFrameData = function(data, frameTime, bone) {
+    	
+        //  debugMode && console.log("data:", data);
+            
+    		if (bone.type === "ENDSITE") // end sites have no motion data
+    			return;
+/*
+   		//  Add keyframe.
+    		var keyframe = { 
+    			time: frameTime,	
+    			position: { x: 0, y: 0, z: 0 },
+    			rotation: new Quat(),
+    		};
+    		
+    		bone.frames.push(keyframe);
+    		
+		//  Parse values for each channel in node.
+    		for (var i = 0; i < bone.channels.length; ++i) {
+    			
+    			switch(bone.channels[i]) {
+    			case "Xposition":
+    				keyframe.position.x = parseFloat(data.shift().trim());
+                    break;
+    			case "Yposition":
+    				keyframe.position.y = parseFloat(data.shift().trim());
+                    break;
+    			case "Zposition":
+    				keyframe.position.z = parseFloat(data.shift().trim());
+    				break;
+    			case "Xrotation":
+    				var quat = new Quat();
+    				quat.setFromAxisAngle(1, 0, 0, parseFloat(data.shift().trim()) * Math.PI / 180);
+    				keyframe.rotation.multiply(quat);
+                    break;
+    			case "Yrotation":
+    				var quat = new Quat();
+    				quat.setFromAxisAngle(0, 1, 0, parseFloat(data.shift().trim()) * Math.PI / 180);
+    				keyframe.rotation.multiply(quat);
+    				break;
+    			case "Zrotation":
+    				var quat = new Quat();
+    				quat.setFromAxisAngle(0, 0, 1, parseFloat(data.shift().trim()) * Math.PI / 180);
+    				keyframe.rotation.multiply(quat);
+    				break;
+    			default:
+                    throw "invalid channel type";
+                    break;
+    			}
+    		}
+*/
+    		
+   		//  Legacy keyframe.
+            
+    		var keyframe = { 
+    			time: frameTime,	
+    			pos: [0,0,0],
+    			rot: new Quat(), //new THREE.Quaternion(),
+    			scl: [1,1,1]
+    		};
+		//  Parse values for each channel in node.
+    		for (var i = 0; i < bone.channels.length; ++i) {
+    			switch(bone.channels[i]) {
+    			case "Xposition":
+    				keyframe.pos[0] = parseFloat(data.shift().trim());
+                    break;
+    			case "Yposition":
+    				keyframe.pos[1] = parseFloat(data.shift().trim());
+                    break;
+    			case "Zposition":
+    				keyframe.pos[2] = parseFloat(data.shift().trim());
+    				break;
+    			case "Xrotation":
+    				var quat = new Quat();
+    				quat.setFromAxisAngle(1, 0, 0, parseFloat(data.shift().trim()) * Math.PI / 180);
+    				keyframe.rot.multiply(quat);
+                    break;
+    			case "Yrotation":
+    				var quat = new Quat();
+    				quat.setFromAxisAngle(0, 1, 0, parseFloat(data.shift().trim()) * Math.PI / 180);
+    				keyframe.rot.multiply(quat);
+    				break;
+    			case "Zrotation":
+    				var quat = new Quat();
+    				quat.setFromAxisAngle(0, 0, 1, parseFloat(data.shift().trim()) * Math.PI / 180);
+    				keyframe.rot.multiply(quat);
+    				break;
+    			default:
+                    throw "invalid channel type";
+                    break;
+    			}
+    		}
+    		debugMode && console.log("keyframe:", keyframe);
+            bone.frames.push(keyframe);
+    	
+		//  Parse child nodes.
+    		for (var i = 0; i < bone.children.length; ++i) {
+    			BVHImport.readFrameData(data, frameTime, bone.children[i]);
+    		}
+    	}
+    
+    /* 
+		traverses the node hierarchy and builds a flat list of nodes	
+    */
+    	function flatten(bone, flatList) {
+    		flatList.push(bone);
+    
+    		if (bone.type !== "ENDSITE") {
+    			for (var i = 0; i < bone.children.length; ++i) {
+    				flatten(bone.children[i], flatList);
+    			}
+    		}
+    	}
+
+	/*
+    	 a minimal quaternion implementation to store joint rotations
+    		 used in keyframe data
+	*/
+    	function Quat(x, y, z, w) {
+    		this.x = x || 0;
+    		this.y = y || 0;
+    		this.z = z || 0;
+    		this.w = (w === undefined) ? 1 : w;
+    	}
+    
+    	Quat.prototype.setFromAxisAngle = function(ax, ay, az, angle) {
+    		var angleHalf = angle * 0.5;
+    		var sin = Math.sin(angleHalf);
+    
+    		this.x = ax * sin;
+    		this.y = ay * sin;
+    		this.z = az * sin;
+    		this.w = Math.cos(angleHalf);
+    	}
+    
+    	Quat.prototype.multiply = function(quat) {
+    		var a = this, b = quat;
+    
+    		var qax = a.x, qay = a.y, qaz = a.z, qaw = a.w;
+    		var qbx = b.x, qby = b.y, qbz = b.z, qbw = b.w;
+    
+    		this.x = qax * qbw + qaw * qbx + qay * qbz - qaz * qby;
+    		this.y = qay * qbw + qaw * qby + qaz * qbx - qax * qbz;
+    		this.z = qaz * qbw + qaw * qbz + qax * qby - qay * qbx;
+    		this.w = qaw * qbw - qax * qbx - qay * qby - qaz * qbz;
+    	}
+    
+    }
+
+</script>
+
+<script>
+    var root;
+	var mixer;
+	var meshBvh;
+	var skeletonHelper;
+    var BVHAnimations = [];
+    
+    var bvhInputSelector = "#load-bvh";
+    var bvhInputBtnSelector = "#import-bvh";
+    
+    $(bvhInputBtnSelector).on("click", function(){ 
+        $(bvhInputSelector).click(); 
+    });
+
+	$(bvhInputSelector).on("change", function(e) {
+	
+    //  Remove old bvh mesh and skeleton helper.
+        if (skeletonHelper) {
+            scene.remove(skeletonHelper);
+            skeletonHelper.geometry.dispose();
+            skeletonHelper.material.dispose();
+        }
+        if (meshBvh) {
+            scene.remove(meshBvh);
+            meshBvh.geometry.dispose();
+            meshBvh.material.dispose();
+        }
+        
+    //  Read bvh file.
+		var file = e.target.files[0];
+		var reader = new FileReader();
+		reader.onload = function(e) { // parse file
+            var lines = e.target.result.split(/[\r\n]+/g);
+
+		//  import BVH file
+			root = BVHImport.readBvh(lines);
+
+		//  =============================================  //
+        //  !!! IMPORTANT NOTE: !!! IMPORTANT NOTE:
+        //  From root, we can produce KeyFrameAnimations, 
+        //  using root.frames and root.children.frames.
+        
+        //  debugMode && console.log("root:", root);
+            
+        //  FROM ROOT TO LEGACY ANIMATION HIERARCHY DATA.
+            
+        //  Define the animationData object to create the init animation.
+            var animationData = {"name":null, "fps":null, "length":null, "hierarchy":[]};
+            animationData.name = "animation-developing"                         // nameAnimField.value;
+            animationData.fps = 25;                                             //  Number(fpsSlider.value);
+            animationData.length = root.frames[root.frames.length - 1]["time"]; // Number(sliderTimer.max);
+            
+        //  Prepear animationData for first init animation keys.
+
+        //  Create the init key (time:0) for every bone of avatar in animationData.hierarchy.
+//            for (var i in avatar.skeleton.bones) {
+//                animationData.hierarchy.push({"keys":[]});
+//                var initAnimationKey = {"pos":[0,0,0], "rot":[0,0,0,1], "scl":[1,1,1], "time":0};
+//                initAnimationKey.pos = avatar.skeleton.bones[i].position.toArray();
+//                initAnimationKey.rot = avatar.skeleton.bones[i].quaternion.toArray();
+//                initAnimationKey.scl = avatar.skeleton.bones[i].scale.toArray();
+//                animationData.hierarchy[i].keys.push(initAnimationKey);
+//            }
+//            console.log( "Animation Data created:", animationData );
+            
+        //  Create the animation.
+//            THREE.AnimationHandler.animations = [];
+//            animation = new THREE.Animation( avatar, animationData );
+//            animation.isPlaying = false;
+//            animation.currentTime = 0;
+//            timescaleSlider.value = 0;
+//            playButton.innerHTML = "Play";
+//            console.log("Animation created:", animation);
+        //
+        //  ensureLooping();
+
+            
+		//  =============================================  //
+        /*
+			var animation = BVHImport.toTHREE(root);
+			debugMode && console.log("animation:", animation);
+			
+		//  Create a minimal empty geometry to hold the Bones
+            var geometry = new THREE.Geometry();
+
+            var material = new THREE.MeshStandardMaterial({ skinning: true, });
+            meshBvh = new THREE.SkinnedMesh(geometry, material);
+ 
+		//  Bind skeleton.
+            meshBvh.add(animation.skeleton.bones[0]);
+            meshBvh.bind(animation.skeleton);       
+        
+			skeletonHelper = new THREE.SkeletonHelper(meshBvh);
+			skeletonHelper.material.linewidth = 1;
+			skeletonHelper.visible = true;
+
+			scene.add(skeletonHelper);
+			scene.add(meshBvh);
+
+			mixer = new THREE.AnimationMixer(meshBvh);
+			mixer.clipAction(animation.clip).setEffectiveWeight(1.0).play();
+        */
+
+        };
+
+		reader.readAsText(file);
+
+	});
+</script>
+
+<script>
+
+    debugMode = true;
+
+//  jQuery selectors.
+    var divContainerSelector = "div.container";
+    var rendererSelector = "#render-container";
+    var leftSideSelector = "#left-side";
+    var leftPinbtnSelector = "#left-side-pinbtn";
+    var rightSideSelector = "#right-side";
+    var rightPinbtnSelector = "#right-side-pinbtn";
+    var fontPath = "/three/r78/js/fonts/helvetiker_regular.typeface.json";
+
+//  Controls switch.
+    $(rendererSelector).on("mouseenter", function(e){if (controls) controls.enabled = true;});
+    $(rendererSelector).on("mouseleave", function(e){if (controls) controls.enabled = false;});
+
+//  Side Panels Pin buttons.
+    leftSidePanel = $(leftSideSelector)[0];
+    leftSidePinBtn = $(leftPinbtnSelector)[0];
+    if ( !!leftSidePinBtn ){
+        leftSidePinBtn.pinned = false;
+        $(leftPinbtnSelector).on("click", function(e){
+            this.pinned = !this.pinned; 
+            this.classList.toggle( "pinned", this.pinned );
+            this.parentElement.classList.toggle( "pinned", this.pinned );
+        });
+    //  Open left side panel.
+        leftSidePanel.classList.toggle( "pinned", true );
+        leftSidePinBtn.classList.toggle( "pinned", true );
+    }
+    
+    rightSidePanel = $(rightSideSelector)[0];
+    rightSidePinBtn = $(rightPinbtnSelector)[0];
+    if ( !!rightSidePinBtn ){
+        rightSidePinBtn.pinned = false;
+        $(rightPinbtnSelector).on("click", function(e){
+            this.pinned = !this.pinned; 
+            this.classList.toggle( "pinned", this.pinned );
+            this.parentElement.classList.toggle( "pinned", this.pinned );
+        });
+    //  Open right side panel.
+        rightSidePanel.classList.toggle( "pinned", true );
+        rightSidePinBtn.classList.toggle( "pinned", true );
+    }
+
+</script>
+
+<script>
+    
+//  Simple add event.
+    function addEventSimple(obj,evt,fn) {
+    	if (obj.addEventListener)
+    		obj.addEventListener(evt,fn,false);
+    	else if (obj.attachEvent)
+    		obj.attachEvent('on'+evt,fn);
+    }
+
+//  Simple remove event.
+    function removeEventSimple(obj,evt,fn) {
+    	if (obj.removeEventListener)
+    		obj.removeEventListener(evt,fn,false);
+    	else if (obj.detachEvent)
+    		obj.detachEvent('on'+evt,fn);
+    }
+    
+//  Key drag&drop object.
+    keyDragDrop = {
+    	keyHTML: "<a href='#' class='keyLink'></a>",
+    	keySpeed: 1, // pixels per keypress event
+    	initialMouseX: undefined,
+    	initialMouseY: undefined,
+    	startX: undefined,
+    	startY: undefined,
+    	dXKeys: undefined,
+    	dYKeys: undefined,
+    	draggedObject: undefined,
+    	
+    	initElement: function (element) {
+    		if (typeof element == "string")
+    			element = document.getElementById(element);
+    		element.onmousedown = keyDragDrop.startDragMouse;
+    		element.innerHTML += keyDragDrop.keyHTML;
+    		var links = element.getElementsByTagName("a");
+    		var lastLink = links[links.length-1];
+    		lastLink.relatedElement = element;
+    		lastLink.onclick = keyDragDrop.startDragKeys;
+    	},
+    	startDragMouse: function (e) {
+    		keyDragDrop.startDrag(this);
+    		var evt = e || window.event;
+    		keyDragDrop.initialMouseX = evt.clientX;
+    		keyDragDrop.initialMouseY = evt.clientY;
+    		addEventSimple(document,"mousemove",keyDragDrop.dragMouse);
+    		addEventSimple(document,"mouseup",keyDragDrop.releaseElement);
+    		return false;
+    	},
+    	startDragKeys: function () {
+    		keyDragDrop.startDrag(this.relatedElement);
+    		keyDragDrop.dXKeys = keyDragDrop.dYKeys = 0;
+    		addEventSimple(document,"keydown",keyDragDrop.dragKeys);
+    		addEventSimple(document,"keypress",keyDragDrop.switchKeyEvents);
+    		this.blur();
+    		return false;
+    	},
+    	startDrag: function (obj) {
+    		if (keyDragDrop.draggedObject)
+    			keyDragDrop.releaseElement();
+    		keyDragDrop.startX = obj.offsetLeft;
+    		keyDragDrop.startY = obj.offsetTop;
+    		keyDragDrop.draggedObject = obj;
+    		obj.className = "dragged";
+    	},
+    	dragMouse: function (e) {
+    		var evt = e || window.event;
+    		var dX = evt.clientX - keyDragDrop.initialMouseX;
+    		var dY = evt.clientY - keyDragDrop.initialMouseY;
+    		keyDragDrop.setPosition(dX,dY);
+    		return false;
+    	},
+    	dragKeys: function(e) {
+    		var evt = e || window.event;
+    		var key = evt.keyCode;
+    		switch (key) {
+    			case 37:	// left
+    			case 63234:
+    				keyDragDrop.dXKeys -= keyDragDrop.keySpeed;
+    				break;
+    			case 38:	// up
+    			case 63232:
+    				keyDragDrop.dYKeys -= keyDragDrop.keySpeed;
+    				break;
+    			case 39:	// right
+    			case 63235:
+    				keyDragDrop.dXKeys += keyDragDrop.keySpeed;
+    				break;
+    			case 40:	// down
+    			case 63233:
+    				keyDragDrop.dYKeys += keyDragDrop.keySpeed;
+    				break;
+    			case 13: 	// enter
+    			case 27: 	// escape
+    				keyDragDrop.releaseElement();
+    				return false;
+    			default:
+    				return true;
+    		}
+    		keyDragDrop.setPosition(keyDragDrop.dXKeys,keyDragDrop.dYKeys);
+    		if (evt.preventDefault)
+    			evt.preventDefault();
+    		return false;
+    	},
+    	setPosition: function (dx,dy) {
+    	    if ( keyDragDrop.startX + dx > 0 && keyDragDrop.startX + dx < document.getElementById("keys-container").offsetWidth - keyDragDrop.draggedObject.offsetWidth){
+    	        var x = (keyDragDrop.startX + dx) / (document.getElementById("keys-container").offsetWidth - keyDragDrop.draggedObject.offsetWidth);
+    	        
+    	        if (x < 0) {
+                    x = 0;
+                }
+    	        else if (x > document.getElementById("keys-container").offsetWidth - keyDragDrop.draggedObject.offsetWidth) {
+                    x = 1;
+                }
+                
+             // Round x to second fractal digit;
+                x = 100 * Math.round(x * 10000)/10000;
+             
+                keyDragDrop.draggedObject.style.left = x + "%";
+       		}
+    		//  keyDragDrop.draggedObject.style.top = keyDragDrop.startY + dy + 'px';
+    	},
+    	switchKeyEvents: function () {
+		// for Opera and Safari 1.3
+    		removeEventSimple(document,'keydown',keyDragDrop.dragKeys);
+    		removeEventSimple(document,'keypress',keyDragDrop.switchKeyEvents);
+    		addEventSimple(document,'keypress',keyDragDrop.dragKeys);
+    	},
+    	releaseElement: function() {
+    		removeEventSimple(document,'mousemove',keyDragDrop.dragMouse);
+    		removeEventSimple(document,'mouseup',keyDragDrop.releaseElement);
+    		removeEventSimple(document,'keypress',keyDragDrop.dragKeys);
+    		removeEventSimple(document,'keypress',keyDragDrop.switchKeyEvents);
+    		removeEventSimple(document,'keydown',keyDragDrop.dragKeys);
+    		keyDragDrop.draggedObject.className = keyDragDrop.draggedObject.className.replace(/dragged/, "keymark");
+    		keyDragDrop.draggedObject = undefined;
+    	}
+    }
+
+</script>
+
+<script>
+
+//  Ids.
+
+//    var rendercontainer = "render-container";
+//    var droplistbones = "droplist-bones";
+//    var avatarhelper = "avatar-helper";
+//    var boneshelper = "bones-helper";
+//    var restpose = "rest-pose";
+//
+    var possliderx = "pos-slider-x";
+    var posslidery = "pos-slider-y";
+    var possliderz = "pos-slider-z";
+    var posoutputx = "pos-output-x";
+    var posoutputy = "pos-output-y";
+    var posoutputz = "pos-output-z";
+//
+    var rotsliderx = "rot-slider-x";
+    var rotslidery = "rot-slider-y";
+    var rotsliderz = "rot-slider-z";
+    var rotoutputx = "rot-output-x";
+    var rotoutputy = "rot-output-y";
+    var rotoutputz = "rot-output-z";
+//
+    var scluniformslider = "scl-uniform-slider";
+    var scluniformoutput = "scl-uniform-output";
+//
+    var sclsliderx = "scl-slider-x";
+    var sclslidery = "scl-slider-y";
+    var sclsliderz = "scl-slider-z";
+    var scloutputx = "scl-output-x";
+    var scloutputy = "scl-output-y";
+    var scloutputz = "scl-output-z";
+//
+//    var durationslider = "duration-slider"; 
+//    var durationoutput = "duration-output";
+//    var scltimeslider = "scl-time-slider";
+//    var scltimeoutput = "scl-time-output";
+//    var animationname = "animation-name";
+//    var animationloop = "animation-loop";
+//
+//    var loadmale = "load-male";
+//    var loadfemale = "load-female";
+//    var loadskeleton = "load-skeleton";
+//
+//    var loadpose = "load-pose";
+//    var importpose = "import-pose";
+//    var loadskinned = "load-skinned";
+//    var importskinned = "import-skinned";
+//    var loaddata = "load-data";
+//    var importanimation = "import-animation";
+//
+//    var downloadpose = "download-pose";
+//    var savepose = "save-pose";
+//    var downloadanimation = "download-animation";
+//    var saveanimation = "save-animation";
+//    var crazypose = "crazy-pose";
+//
+//    var timecontainer = "time-container";
+//    var slidertimer = "slider-timer";
+//    var outputtimer = "output-timer";
+//    var animationplay = "animation-play";
+//    var animationadd = "animation-add";
+//    var manualplay = "manual-play";
+
+//  Selectors.
+
+//    var rendererSelector = "#" + rendercontainer;
+//    var droplistbonesSelector = "#" + droplistbones;
+//    var avatarhelperSelector = "#" + avatarhelper;
+//    var boneshelperSelector = "#" + boneshelper;
+//    var restposeSelector = "#" + restpose;
+//
+    var possliderxSelector = "#" + possliderx;
+    var possliderySelector = "#" + posslidery;
+    var possliderzSelector = "#" + possliderz;
+    var posoutputxSelector = "#" + posoutputx;
+    var posoutputySelector = "#" + posoutputy;
+    var posoutputzSelector = "#" + posoutputz;
+//
+    var rotsliderxSelector = "#" + rotsliderx;
+    var rotsliderySelector = "#" + rotslidery;
+    var rotsliderzSelector = "#" + rotsliderz;
+    var rotoutputxSelector = "#" + rotoutputx;
+    var rotoutputySelector = "#" + rotoutputy;
+    var rotoutputzSelector = "#" + rotoutputz;
+//
+    var scluniformsliderSelector = "#" + scluniformslider;
+    var scluniformoutputSelector = "#" + scluniformoutput;
+//
+    var sclsliderxSelector = "#" + sclsliderx;
+    var sclsliderySelector = "#" + sclslidery;
+    var sclsliderzSelector = "#" + sclsliderz;
+    var scloutputxSelector = "#" + scloutputx;
+    var scloutputySelector = "#" + scloutputy;
+    var scloutputzSelector = "#" + scloutputz;
+//
+//    var durationsliderSelector = "#" + durationslider; 
+//    var durationoutputSelector = "#" + durationoutput;
+//    var scltimesliderSelector = "#" + scltimeslider;
+//    var scltimeoutputSelector = "#" + scltimeoutput;
+//    var animationnameSelector = "#" + animationname;
+//    var animationloopSelector = "#" + animationloop;
+//
+//    var loadmaleSelector = "#" + loadmale;
+//    var loadfemaleSelector = "#" + loadfemale;
+//    var loadskeletonSelector = "#" + loadskeleton;
+//
+//    var loadposeSelector = "#" + loadpose;
+//    var importposeSelector = "#" + importpose;
+//    var loadskinnedSelector = "#" + loadskinned;
+//    var importskinnedSelector = "#" + importskinned;
+//    var loaddataSelector = "#" + loaddata;
+//    var importanimationSelector = "#" + importanimation;
+//
+//    var downloadposeSelector = "#" + downloadpose;
+//    var saveposeSelector = "#" + savepose;
+//    var downloadanimationSelector = "#" + downloadanimation;
+//    var saveanimationSelector = "#" + saveanimation;
+//    var crazyposeSelector = "#" + crazypose;
+//
+//    var timecontainerSelector = "#" + timecontainer;
+//    var slidertimerSelector = "#" + slidertimer;    
+//    var animationplaySelector = "#" + animationplay;
+//    var animationaddSelector = "#" + animationadd;
+//    var manualplaySelector = "#" + manualplay;
+
+//  Elements.
+
+//    bonesDroplist = document.getElementById(droplistbones);
+
+//  Position sliders.
+    posSliderX = document.getElementById(possliderx);
+    posSliderY = document.getElementById(posslidery);
+    posSliderZ = document.getElementById(possliderz);
+    posOutputX = document.getElementById(posoutputx);
+    posOutputY = document.getElementById(posoutputy);
+    posOutputZ = document.getElementById(posoutputz);
+    
+//  Rotation sliders.
+    rotSliderX = document.getElementById(rotsliderx);
+    rotSliderY = document.getElementById(rotslidery);
+    rotSliderZ = document.getElementById(rotsliderz);
+    rotOutputX = document.getElementById(rotoutputx);
+    rotOutputY = document.getElementById(rotoutputy);
+    rotOutputZ = document.getElementById(rotoutputz);
+    
+//  Uniform Scale slider.
+    sclUniformSlider = document.getElementById(scluniformslider);
+    sclUniformOutput = document.getElementById(scluniformoutput);
+    
+//  Scale sliders.
+    sclSliderX = document.getElementById(sclsliderx);
+    sclSliderY = document.getElementById(sclslidery);
+    sclSliderZ = document.getElementById(sclsliderz);
+    sclOutputX = document.getElementById(scloutputx);
+    sclOutputY = document.getElementById(scloutputy);
+    sclOutputZ = document.getElementById(scloutputz);
+
+//  Animation Settings.
+//    timeContainer = document.getElementById(timecontainer);
+//    durSlider = document.getElementById(durationslider);
+//    durOutput = document.getElementById(durationoutput);
+//    timescaleSlider = document.getElementById(scltimeslider);
+//    timescaleOutput = document.getElementById(scltimeoutput);
+//    //fpsSlider = document.getElementById(sliderfps);
+//    nameAnimField = document.getElementById(animationname);
+//    loopCheckbox = document.getElementById(animationloop);
+
+//  Choose model.
+//    loadMaleButton = document.getElementById(loadmale);
+//    loadFemaleButton = document.getElementById(loadfemale);
+//    loadSkeletonButton = document.getElementById(loadskeleton);
+
+//  Import file.
+//    loadPoseInput = document.getElementById(loadpose);
+//    importPoseButton = document.getElementById(importpose);
+//    loadSkinnedInput = document.getElementById(loadskinned);
+//    importSkinnedButton = document.getElementById(importskinned);
+//    loadAnimationInput = document.getElementById(loaddata);
+//    importAnimationButton = document.getElementById(importanimation);
+
+//  Export/Save.
+//    downloadPoseButton = document.getElementById(downloadpose);
+//    savePoseButton = document.getElementById(savepose);
+//    downloadAnimButton = document.getElementById(downloadanimation);
+//    saveAnimButton = document.getElementById(saveanimation);
+//    crazyPoseButton = document.getElementById(crazypose);
+
+//  Animator Controls.
+//    sliderTimer = document.getElementById(slidertimer);
+//    outputTimer = document.getElementById(outputtimer);
+//    playButton = document.getElementById(animationplay);
+//    addButton = document.getElementById(animationadd);
+//    playManual = document.getElementById(manualplay);
+//
+</script>
+
+<script>
+
+//  Event Listeners.
+    var rendercontainer = "render-container";
+    var droplistbones = "droplist-bones";
+    var avatarhelper = "avatar-helper";
+    var boneshelper = "bones-helper";
+    var restpose = "rest-pose";
+
+    var rendererSelector = "#" + rendercontainer;
+    var droplistbonesSelector = "#" + droplistbones;
+    var avatarhelperSelector = "#" + avatarhelper;
+    var boneshelperSelector = "#" + boneshelper;
+    var restposeSelector = "#" + restpose;
+
+    container = document.getElementById(rendercontainer);
+    bonesDroplist = document.getElementById(droplistbones);
+//     = document.getElementById();
+//     = document.getElementById();
+//     = document.getElementById();
+//     = document.getElementById();
+
+    $(avatarhelperSelector).on("click", function(e){ toggleVisible(avatar); });
+    $(boneshelperSelector).on("click", function(e){ toggleVisible(armatureHelper); });
+    $(restposeSelector).on("click", function(e){ avatarRestPose(avatar); });
+//
+
+//  ANIMATION SETTINGS:
+//
+    var durationslider = "duration-slider"; 
+    var durationoutput = "duration-output";
+    var scltimeslider = "scl-time-slider";
+    var scltimeoutput = "scl-time-output";
+    var animationname = "animation-name";
+    var animationloop = "animation-loop";
+
+    var durationsliderSelector = "#" + durationslider; 
+    var durationoutputSelector = "#" + durationoutput;
+    var scltimesliderSelector = "#" + scltimeslider;
+    var scltimeoutputSelector = "#" + scltimeoutput;
+    var animationnameSelector = "#" + animationname;
+    var animationloopSelector = "#" + animationloop;
+
+    timeContainer = document.getElementById(timecontainer);
+    durSlider = document.getElementById(durationslider);
+    durOutput = document.getElementById(durationoutput);
+    timescaleSlider = document.getElementById(scltimeslider);
+    timescaleOutput = document.getElementById(scltimeoutput);
+    nameAnimField = document.getElementById(animationname);
+    loopCheckbox = document.getElementById(animationloop);
+
+    $(durationsliderSelector).on("mousedown", function(e){
+        dynamicSliderPressed(durationslider, durationoutput, true, 0);
+    });
+
+    $(durationsliderSelector).on("mouseup", function(e){
+        dynamicSliderPressed(durationslider, durationoutput, false, 0);
+        initTimeLiner();
+    });
+
+    $(durationoutputSelector).on("change", function(e){ 
+        initTimeLiner(); 
+    });
+
+    $(scltimesliderSelector).on("input", function(e){
+        outputUpdate(scltimeoutput, this.value)
+    });
+
+    $(animationnameSelector).on("change", function(e){
+        animation.data.name = this.value; // submitAnimationName();
+    });
+
+//  SKINNED MODEL:
+//
+    var loadmale = "load-male";
+    var loadfemale = "load-female";
+    var loadskeleton = "load-skeleton";
+    var loadskinned = "load-skinned";
+
+    var loadmaleSelector = "#" + loadmale;
+    var loadfemaleSelector = "#" + loadfemale;
+    var loadskeletonSelector = "#" + loadskeleton;
+
+    loadMaleButton = document.getElementById(loadmale);
+    loadFemaleButton = document.getElementById(loadfemale);
+    loadSkeletonButton = document.getElementById(loadskeleton);
+
+    var maleFilepath = "models/json/skinned/CurioMaleNudebody_v01.js";
+    $(loadmaleSelector).on("click", function(e){
+        e.preventDefault();
+    //  debugMode && console.log(this);
+        loadSkinnedAnimatedMesh(maleFilepath, 1);
+        return false;
+    });
+    var femaleFilepath = "models/json/skinned/RLCFemaleRiggedBody_v06.js";
+    $(loadfemaleSelector).on("click", function(e){
+        e.preventDefault();
+    //  debugMode && console.log(this);
+        loadSkinnedAnimatedMesh(femaleFilepath, 1);
+        return false;
+    });
+    var skeletonFilepath = "models/json/skinned/MannyTheSkeletonDefaultRigged_v04.js";
+    $(loadskeletonSelector).on("click", function(e){
+        e.preventDefault();
+    //  debugMode && console.log(this);
+        loadSkinnedAnimatedMesh(skeletonFilepath, 1);
+        return false;
+    });
+
+//  IMPORT FILE:
+//
+    var importpose = "import-pose";
+    var loadpose = "load-pose";
+    var importskinned = "import-skinned";
+    var loadskinned = "load-skinned";
+    var importanimation = "import-animation";
+    var loaddata = "load-data";
+
+    var importposeSelector = "#" + importpose;
+    var loadposeSelector = "#" + loadpose;
+    var importskinnedSelector = "#" + importskinned;
+    var loadskinnedSelector = "#" + loadskinned;
+    var importanimationSelector = "#" + importanimation;
+    var loaddataSelector = "#" + loaddata;
+
+    var importPoseButton = document.getElementById(importpose);
+    var loadPoseInput = document.getElementById(loadpose);
+    var importSkinnedButton = document.getElementById(importskinned);
+    var loadSkinnedInput = document.getElementById(loadskinned);
+    var importAnimationButton = document.getElementById(importanimation);
+    var loadAnimationInput = document.getElementById(loaddata);
+
+    $(importposeSelector).on("click", function(){
+        loadPoseInput.click();
+    });
+
+    $(importskinnedSelector).on("click", function(){
+        loadSkinnedInput.click();
+    });
+    
+    $(importanimationSelector).on("click", function(){
+        loadAnimationInput.click();
+    });
+
+    $(loadposeSelector).on("change", function(e){
+        importAnimationPoseKeyFromJSON();
+    });
+    
+    $(loadskinnedSelector).on("change", function(e){
+        importSkinnedFromJSONfile();
+    });
+
+    $(loaddataSelector).on("change", function(e){
+        importAnimationDataFromJSON();
+    });
+
+//  EXPORT/SAVE BUTTONS:
+//
+    var downloadpose = "download-pose";
+    var savepose = "save-pose";
+    var downloadanimation = "download-animation";
+    var saveanimation = "save-animation";
+    var crazypose = "crazy-pose";
+
+    var downloadposeSelector = "#" + downloadpose;
+    var saveposeSelector = "#" + savepose;
+    var downloadanimationSelector = "#" + downloadanimation;
+    var saveanimationSelector = "#" + saveanimation;
+    var crazyposeSelector = "#" + crazypose;
+
+    downloadPoseButton = document.getElementById(downloadpose);
+    savePoseButton = document.getElementById(savepose);
+    downloadAnimButton = document.getElementById(downloadanimation);
+    saveAnimButton = document.getElementById(saveanimation);
+    crazyPoseButton = document.getElementById(crazypose);
+
+    $(downloadposeSelector).on("click", function(e){
+        exportAnimationPoseAsJSON()
+    });
+    
+    $(downloadanimationSelector).on("click", function(e){
+        exportAnimationDataAsJSON();
+    });
+
+    $(saveposeSelector).on("click", function(e){
+        submitPose();
+    });
+
+    $(saveanimationSelector).on("click", function(e){
+        submitAnimation();
+    });
+
+    $(crazyposeSelector).on("click", function(e){
+        currentCrazyPosesScript();
+    });
+
+//  TIMELINER CONTROLS.
+//
+    var timecontainer = "time-container";
+    var keyscontainer = "keys-container";
+    var slidertimer = "slider-timer";
+    var outputtimer = "output-timer";
+    var manualplay = "manual-play";
+    var animationplay = "animation-play";
+    var addframekey = "add-framekey";
+    var deleteframekey = "delete-framekey";
+
+    var timecontainerSelector = "#" + timecontainer;
+    var slidertimerSelector = "#" + slidertimer;
+    var manualplaySelector = "#" + manualplay;
+    var animationplaySelector = "#" + animationplay;
+    var addframekeySelector = "#" + addframekey;
+    var deleteframekeySelector = "#" + deleteframekey;
+
+    timeContainer = document.getElementById(timecontainer);
+    sliderTimer = document.getElementById(slidertimer);
+    outputTimer = document.getElementById(outputtimer);
+    keyscontainer = document.getElementById(keyscontainer);
+    playManual = document.getElementById(manualplay);
+    playButton = document.getElementById(animationplay);
+    addButton = document.getElementById(addframekey);
+    deleteButton = document.getElementById(deleteframekey);
+
+//  Initialize manual play.
+    playManual.checked = false;
+
+    $(slidertimerSelector).on("mousedown", function(e){
+        staticSliderPressed(slidertimer, outputtimer, true);
+    });
+
+    $(slidertimerSelector).on("mouseup", function(e){
+        staticSliderPressed(slidertimer, outputtimer, false);
+    });
+
+    $(animationplaySelector).on("click", function(e){
+        playAnimation(avatar);
+    });
+    
+    $(addframekeySelector).on("click", function(e){
+        insertNewAnimateDataTimeFrameKey();
+    });
+
+    $(deleteframekeySelector).on("click", function(e){
+        deleteCurrentAnimationDataKey();
+    });
+
+</script>
+
+<script>
+
+//  RUNTIME CONTROL VALUES.
+
+//  Current slider and bone.
+    currentSliderStatus = false;            // boolean
+    currentSpeed = 1;                       // number slider value
+    currentSlider = undefined;              // slider element
+    currentOutput = undefined;              // output element
+    currentBoneIndex = undefined;           // number for animation.hierarchy[currentBoneIndex]
+    currentBone = undefined;                // object animation.hierarchy[currentBoneIndex]
+    currentDataBone = undefined;            // object animation.data.hierarchy[currentBoneIndex]
+    currentAnimationKeyIndex = undefined;   // number for animation.data.hierarchy[currentBoneIndex].keys[currentAnimationKeyIndex]
+    currentAnimationKeyObject = undefined;  // object animation.data.hierarchy[currentBoneIndex].keys[currentAnimationKeyIndex]
+    currentFrameTime = undefined;           // number Number( document.getElementById("slider-timer").value )
+    animationDataKeyExist = false;          // boolean
+    bcaAnimationDataIndexKeys = [undefined, undefined, undefined];
+//  Define an empty script for random pose generator button.
+    function currentCrazyPosesScript(){};   // script for random pose generator.
+//  How it is works: When we change avatar from Animator-Avatars menu, we parse also the assocciated random poses function in currentCrazyPosesScript function.
+//  When we click the Random Pose button we call the currentCrazyPosesScript() function that is the assocciated random poses function for the selected avatar.
+//  Do not forget that it is important to parse the assocciated random pose avatar function in menu Animator-Avatars-[the selected avatar] menu item.
+
+
+    function staticSliderPressed(slider_id, output_id, status){ 
+        currentSlider = document.getElementById( slider_id );
+        currentOutput = document.getElementById( output_id );
+        currentSliderStatus = status;
+        // getCurrentBone();
+    }
+
+    function dynamicSliderPressed(slider_id, output_id, status, restore){ 
+        currentSlider = document.getElementById( slider_id );
+        currentOutput = document.getElementById( output_id );
+        currentSliderStatus = status;
+        currentSlider.value = restore;
+        // getCurrentBone();
+    }
+
+//  Animation Timer slider update.
+    function animationTimerSlider() {
+        if (currentSlider == sliderTimer) {
+            currentOutput.value = currentSlider.value;
+            var t = Number(sliderTimer.value);
+            
+            if (animation) {
+                timescaleSlider.value = 0;
+                timescaleOutput.value = currentSpeed;
+                playButton.innerHTML = "Play";
+                animation.play(t);
+            }
+            else if (!animation) {
+            //  Find the nearest lower frame-time in animationData.
+                var keysArray = animationData.hierarchy[0].keys;
+                if (keysArray.length > 0){
+                    for (var i in keysArray){
+                        if ( keysArray[i].time <= t) var keyIdx = Number(i);
+                    }
+                //  console.log(keyIdx, "i:", i);
+                //  Adjust bones dimensions to nearest time-frame.
+                    for (var j in animationData.hierarchy){
+                        var avatarBone = avatar.skeleton.bones[j];
+                        var animateKey = animationData.hierarchy[j].keys[keyIdx];
+                        avatarBone.position.fromArray(animateKey.pos);
+                        avatarBone.quaternion.fromArray(animateKey.rot);
+                        avatarBone.scale.fromArray(animateKey.scl);
+                    }
+                }
+            }
+            reverseSubmitPositionValue();
+            reverseSubmitStaticRotationValue();
+            reverseSubmitScaleValue();
+        }
+    }
+    
+//  Animation Adjust sliders update.
+    function animationAdjustSliders(){
+
+        if (currentSlider == posSliderX || currentSlider == posSliderY || currentSlider == posSliderZ ||
+            currentSlider == rotSliderX || currentSlider == rotSliderY || currentSlider == rotSliderZ ||
+            currentSlider == sclSliderX || currentSlider == sclSliderY || currentSlider == sclSliderZ ){
+            
+                submitNewPositionValue();
+                submitStaticRotationValue();
+                submitNewScaleValue();
+        }
+    }
+
+</script>
+
+<script>
+
+//  IMPORT - EXPORT - ANIMATION - POSE.
+
+    function importSkinnedFromJSONfile(){
+        console.log("Importing data object from JSON file.");
+        
+    //  JSON TEXT CONTENTS READER.
+        var reader = new FileReader();
+        
+    //  FileList object.
+        var file = event.target.files[0];
+        var filename = file.name;
+        var extension = filename.split( '.' ).pop().toLowerCase();
+        var name = filename.split( '.' )[0];
+        
+        console.log("file:", file);
+        console.log("filename:", filename);
+		console.log("extension:", extension);
+		console.log("name:", name);
+
+    //  Read json file as a text string.
+        reader.readAsText(file);
+        
+    //  When reading competed...
+        var contents, dataObject;
+        reader.onloadend = function( event ){
+            contents = event.target.result;
+            console.log("JSON contents readed as text string.", contents);
+            dataObject = JSON.parse( contents );
+            console.log("JSON contents parsed as data:", dataObject);
+        //  ...............................................................  //
+        //                                                                   //
+        //          Add code what to do with json data here.                 //
+        //                                                                   //
+        //  ...............................................................  //
+            console.log("Importing json object from JSON file completed.");
+        };
+    }
+
+    function importAnimationDataFromJSON(){
+        console.log("Importing animation data object from JSON file.");
+        var inputfile = document.getElementById("load-data");
+        
+   //  JSON TEXT CONTENTS READER.
+        var reader = new FileReader();
+        
+    //  FileList object.
+        var file = event.target.files[0];
+        var filename = file.name;
+        var extension = filename.split( '.' ).pop().toLowerCase();
+        var name = filename.split( '.' )[0];
+        
+    //  Read json file as a text string.
+        reader.readAsText(file);
+        
+    //  When reading competed...
+        var contents, dataObject;
+        reader.onloadend = function( event ){
+            contents = event.target.result;
+            dataObject = JSON.parse( contents );
+			console.log("animation dataObject:", dataObject);
+			
+        //  Replace the animation.
+            THREE.AnimationHandler.animations = [];
+            animation = new THREE.Animation( avatar, dataObject );
+            animation.currentTime = 0;
+            durOutput.value = animation.data.length;
+            sliderTimer.max = animation.data.length;
+            timescaleSlider.value = 0;
+            nameAnimField.value = animation.data.name;
+            //  animation.isPlaying = true;
+            animation.play(0);
+            playButton.innerHTML = "Play";
+        //
+            console.log("Animation created:", animation);
+        };
+    }
+
+    function importAnimationPoseKeyFromJSON(){
+        console.log("Importing animation pose keys from JSON file.");
+        var inputfile = document.getElementById("load-pose");
+        
+    //  JSON TEXT CONTENTS READER.
+        var reader = new FileReader();
+        
+    //  FileList object.
+        var file = event.target.files[0];
+        var filename = file.name;
+		var extension = filename.split( '.' ).pop().toLowerCase();
+		var name = filename.split( '.' )[0];
+		
+		console.log("file:", file);
+		console.log("filename:", filename);
+		console.log("extension:", extension);
+		console.log("name:", name);
+        
+//      1. First we read json file as text.
+
+    //  Read json file as a text string.
+        reader.readAsText(file);
+        
+    //  When reading competed...
+        reader.onloadend = function(event){
+            //console.log(event.target.result);
+            var contents = event.target.result;
+        //  Pose Json data for pose animation collection input.
+            var PoseJsonData = event.target.result;
+            //console.log("contents:", contents);
+            console.log("json contents readed as text string.");
+            
+//      2. Then we parse json string as json data with JSON parser.
+        //  Parse json contents string as json data.
+            var poseArray = JSON.parse( contents );
+            console.log("json contents parsed as poseArray:", poseArray);
+
+			bcaFrameKeyIndexesArray( sliderTimer.value );
+			if (animationDataKeyExist){
+			//  Replace key if exist.
+                for (var i in poseArray){
+                    animation.data.hierarchy[i].keys[currentAnimationKeyIndex].pos = poseArray[i].pos;
+                    animation.data.hierarchy[i].keys[currentAnimationKeyIndex].rot.fromArray(poseArray[i].rot);
+                    animation.data.hierarchy[i].keys[currentAnimationKeyIndex].scl = poseArray[i].scl;
+                }
+                console.log("Animation pose key", currentAnimationKeyIndex, "replaced at", sliderTimer.value, "sec.", animation.data.hierarchy);
+			}
+			else if (!animationDataKeyExist) {
+			//  Insert key if not exists.
+                var b = bcaAnimationDataIndexKeys[0];
+                var c = bcaAnimationDataIndexKeys[1];
+                var a = bcaAnimationDataIndexKeys[2];
+                if ( b &&  a ) { idx = b; spl = a; }          // splice to next key index.
+                else if (!b &&  a) { idx = 0; spl = a; }      // splice to next key index.
+                else if ( b && !a) { idx = b; spl = b + 1; }  // push to end of keys array.
+                else if (!b && !a) { idx = 0; spl = 0; }      // keys array is empty. unshift to beginning of keys array.
+                
+                for (var i in animation.data.hierarchy){
+                    var newKey = {"index":spl, "pos":[], "rot":new THREE.Quaternion(), "scl":[], "time":Number(sliderTimer.value)};
+                    newKey.pos = poseArray[i].pos;
+                    newKey.rot.fromArray(poseArray[i].rot);
+                    newKey.scl = poseArray[i].scl;
+                //  Add new key in animation data hierarchy keys array.
+                    if (spl < animation.data.hierarchy[i].keys.length) 
+                        animation.data.hierarchy[i].keys.splice(spl, 0, newKey);      // add new key before the after key.
+                    else animation.data.hierarchy[i].keys.push(newKey);               // add new key at end of keys array.
+                //  Ensure keys indexing.
+                    for (var j in animation.data.hierarchy[i].keys){
+                        animation.data.hierarchy[i].keys[j].index = Number(j);
+                    }
+                }
+                console.log("New animation data key imported at", sliderTimer.value, "sec.", animation.data.hierarchy);
+            }
+            ensureLooping();
+            ensureKeysIndexing();
+            bcaFrameKeyIndexesArray( sliderTimer.value );
+            console.log("Animation pose key completed.");
+            
+            animation.isPlaying = true;
+            timescaleSlider.value = 0;
+            animation.play( animation.currentTime );
+            playButton.innerHTML = "Play";
+            
+        //  Update bca indexes to get the new currentAnimationKeyIndex.
+            bcaFrameKeyIndexesArray( sliderTimer.value );
+        //  Get currentAnimationKeyIndex and then define currentAnimationKeyObject.
+            newCurrentBoneSelected();
+        };
+    }
+
+    function exportAnimationDataAsJSON(){
+        console.log("Exporting animation data as JSON.");
+        ensureLooping();
+        ensureKeysIndexing();
+        bcaFrameKeyIndexesArray( sliderTimer.value );
+        
+        var jsonExport;
+        if (animationDataKeyExist) {
+            var dataExport = {"name":"", "fps":0, "length":0, "hierarchy":[]}
+            dataExport.name = animation.data.name;
+            dataExport.fps = animation.data.fps;
+            dataExport.length = animation.data.length;
+            
+            for (var i in animation.data.hierarchy){
+                var keysExport = {keys:[]}
+                for (var j in animation.data.hierarchy[i].keys){
+                    var key = {"pos":[], "rot":[], "scl":[], "time":0};
+                    key.pos = animation.data.hierarchy[i].keys[j].pos;
+                    key.rot = animation.data.hierarchy[i].keys[j].rot.toArray();
+                    key.scl = animation.data.hierarchy[i].keys[j].scl;
+                    key.time = animation.data.hierarchy[i].keys[j].time;
+                    keysExport.keys.push(key);
+                }
+                dataExport.hierarchy.push(keysExport);
+            }
+            console.log(dataExport);
+        //
+            jsonExport = JSON.stringify(dataExport);
+            console.log(jsonExport);
+        //
+            alert("Animation data exported succesfully.");
+            
+        } else {
+        
+            var a = "Current animation data key does not exists.";
+            var b = "You can not export animation data.";
+            console.log(a, b, "\n" + jsonExport, "returned.");
+            alert(a + "\n" + b);
+        }
+        return jsonExport;
+    }
+
+    function exportAnimationPoseAsJSON(){
+        console.log("Exporting animation key Pose as JSON.");
+        var poseExport = [];
+        for (var i in animation.hierarchy) {
+        //  Create a new animation data key with current time bones values.
+        //  var poseKey = {"index":0, "pos":[], "rot":[], "scl":[], "time":0};
+            var poseKey = {"pos":[], "rot":[], "scl":[]};
+        //  Get bones values at current time from animation.hierarchy.
+            poseKey.pos = animation.hierarchy[i].position.toArray();
+            poseKey.rot = (animation.hierarchy[i].quaternion).toArray();
+            poseKey.scl = animation.hierarchy[i].scale.toArray();
+            poseExport.push(poseKey);
+        }
+        poseExport = JSON.stringify(poseExport);
+        console.log(poseExport);
+        alert("Animation pose exported succesfully.");
+        return poseExport;
+    }
+
+    function exportAnimationExistedKeyPoseAsJSON(keyIdx){
+        console.log("Exporting animation existed key Pose as JSON.");
+        // ensureLooping();
+        ensureKeysIndexing();
+        bcaFrameKeyIndexesArray( sliderTimer.value );
+        
+        if (animationDataKeyExist) {
+            var poseExport = [];
+            for (var i in animation.data.hierarchy){
+            //  poseExport.push(animation.data.hierarchy[i].keys[currentAnimationKeyIndex])
+                var poseKey = {"pos":[], "rot":[], "scl":[]};
+            //  Get bones values at current time from animation.data.hierarchy.
+                poseKey.pos = animation.data.hierarchy[i].keys[keyIdx].pos;
+                poseKey.rot = animation.data.hierarchy[i].keys[keyIdx].rot.toArray();
+                poseKey.scl = animation.data.hierarchy[i].keys[keyIdx].scl;
+                poseExport.push(poseKey);
+            }
+            poseExport = JSON.stringify(poseExport);
+            console.log(poseExport);
+            return poseExport;
+        }
+        else if (!animationDataKeyExist) {
+            console.log("Current animation data key does not exists.", "You can not export animation pose keys.");
+            return undefined;
+        }
+    }
+
+    function saveJSONtoFile(jsonData){
+        if (jsonData){
+            var blob = new Blob([jsonData], {type: "application/json"});
+            var url  = URL.createObjectURL(blob);
+            var a = document.createElement("a");
+            
+            a.download = "exported json.txt";
+            a.href = url;
+            a.onclick = destroyClickedElement;
+            a.style.display = "none";
+            document.body.appendChild(a);
+            a.click();
+        }
+    }
+
+    function destroyClickedElement(event) {
+    	document.body.removeChild(event.target);
+    }
+
+</script>
+
+<script>
+
+// DYNAMIC SLIDERS.
+
+//  Initialize Position sliders.
+    var pmin, pmax, pstep;
+    pmin = -1; pmax = 1; pstep = 0.01; 
+    initSlider(posSliderX, pmin, pmax, pstep);
+    initSlider(posSliderY, pmin, pmax, pstep);
+    initSlider(posSliderZ, pmin, pmax, pstep);
+    
+//  Initialize Static Rotation sliders.
+    var rmin, rmax, rstep;
+    rmin = -180; rmax = 180; rstep = 1;
+    initSlider(rotSliderX, rmin, rmax, rstep);
+    initSlider(rotSliderY, rmin, rmax, rstep);
+    initSlider(rotSliderZ, rmin, rmax, rstep);
+    
+//  Initialize Scale sliders.
+    var sclmin, sclmax, sclstep;
+    sclmin = 0.99; sclmax = 1.01; sclstep = 0.001;
+    initSlider(sclSliderX, sclmin, sclmax, sclstep);
+    initSlider(sclSliderY, sclmin, sclmax, sclstep);
+    initSlider(sclSliderZ, sclmin, sclmax, sclstep);
+    initSlider(sclUniformSlider, sclmin, sclmax, sclstep);
+    
+//  Initialize Animation sliders.
+    var durmin, durmax, durstep;
+    durmin = -0.2; durmax = 0.2; durstep = 0.01;
+    initSlider(durSlider, durmin, durmax, durstep);
+    
+    function initSlider(domSlider, min, max, step){
+        domSlider.min = min;
+        domSlider.max = max;
+        domSlider.step = step;
+    }
+
+    function outputUpdate(output_id, value) { 
+        document.getElementById(output_id).value = value;
+    }
+
+    function newCurrentBoneSelected(){ 
+        getCurrentBone();           
+        initBonesAdjustValues();
+    }
+
+    function getCurrentBone(){
+    //  var bonesDroplist = document.getElementById("droplist-bones");
+        currentBoneIndex = bonesDroplist.selectedIndex;                      // number.
+        currentBone = animation.hierarchy[currentBoneIndex];                 // object.
+        currentDataBone = animation.data.hierarchy[currentBoneIndex];        // object.
+    }
+
+    function initBonesAdjustValues(){
+    
+    //  INITIALAZE POSITION OUTPUT VALUES.
+        posOutputX.value = currentBone.position.x.toFixed(0);     // string
+        posOutputY.value = currentBone.position.y.toFixed(0);     // string
+        posOutputZ.value = currentBone.position.z.toFixed(0);     // string
+        
+    //  INITIALAZE ROTATION OUTPUT VALUES.
+        var xrad = currentBone.rotation._x;                       // number rad
+        var yrad = currentBone.rotation._y;                       // number rad
+        var zrad = currentBone.rotation._z;                       // number rad
+    //  Always return first rotation y because of quaternion.
+        rotOutputY.value = THREE.Math.radToDeg(yrad).toFixed(0);  // string degrees
+        rotOutputX.value = THREE.Math.radToDeg(xrad).toFixed(0);  // string degrees
+        rotOutputZ.value = THREE.Math.radToDeg(zrad).toFixed(0);  // string degrees
+    //  Always return first rotation y because of quaternion.
+        rotSliderY.value = Number(rotOutputY.value);             // number degrees
+        rotSliderX.value = Number(rotOutputX.value);             // number degrees
+        rotSliderZ.value = Number(rotOutputZ.value);             // number degrees
+        
+    //  INITIALAZE SCALE OUTPUT VALUES.
+        sx = currentBone.scale.x * 100;      // number
+        sy = currentBone.scale.y * 100;      // number
+        sz = currentBone.scale.z * 100;      // number
+        sclOutputX.value = sx.toFixed(1);    // string
+        sclOutputY.value = sy.toFixed(1);    // string
+        sclOutputZ.value = sz.toFixed(1);    // string
+        sclUniformOutput.value = sclOutputY.value;
+        //  document.getElementById("animator-container-controls").style.display = "block";
+    }
+
+    function initBonesDroplist(theAvatar){
+    //  Remove all options from droplist.
+        bonesDroplist.innerHTML = null;
+        
+    //  Create new options list from avatar bones.
+        for (var i in theAvatar.skeleton.bones){
+            var newOption = document.createElement("option");
+            newOption.value = theAvatar.skeleton.bones[i].name;
+            newOption.text = theAvatar.skeleton.bones[i].name;
+            bonesDroplist.options.add(newOption);
+        }
+    }
+
+</script>
+
+<script>
+
+//  TIMELINE.
+
+//  var timecontainer = "time-container";
+//  var timeContainer = document.getElementById(timecontainer);
+
+    function initTimeLiner() {
+    
+    //  Timeliner.
+    //  var timeContainer = document.getElementById(timecontainer);
+        timeContainer.innerHTML = "";
+            
+    //  Settings.
+        var duration, defaultTimeScale;
+        if ( durOutput ) { duration = Number(durOutput.value);               // (sec).
+        } else { duration = 3 };                                             // (sec).
+        defaultTimeScale = Math.floor(timeContainer.offsetWidth / duration); // (pixels).
+        
+    //  Dimensions.
+        var markerTrackHeight = 20;
+        var width = sliderTimer.offsetWidth; // duration * defaultTimeScale;
+        var height = 50;
+        var timeScale = defaultTimeScale; // number of pixels to 1 second.
+    
+    //  Utilities.
+        function proxy_ctx(ctx) {
+    	//  Creates a proxy 2d context wrapper which 
+    	//  allows the fluent / chaining API.
+        	var wrapper = {};
+        
+        	function proxy_function(c) {
+        		return function() {
+    			//  Warning: this doesn't return value of function call
+        			ctx[c].apply(ctx, arguments);
+        			return wrapper;
+        		};
+        	}
+        
+        	function proxy_property(c) {
+        		return function(v) {
+        			ctx[c] = v;
+        			return wrapper;
+        		};
+        	}
+        
+        	wrapper.run = function(args) {
+        		args(wrapper);
+        		return wrapper;
+        	};
+            
+        	for (var c in ctx) {
+    		//  if (!ctx.hasOwnProperty(c)) continue;
+    		//  debugMode && console.log(c, typeof(ctx[c]), ctx.hasOwnProperty(c));
+    		//  string, number, boolean, function, object
+        
+        		var type = typeof(ctx[c]);
+        		switch(type) {
+        			case "object":
+        				break;
+        			case "function":
+        				wrapper[c] = proxy_function(c);
+        				break;
+        			default:
+        				wrapper[c] = proxy_property(c);
+        				break;
+        		}
+        	}
+        
+        	return wrapper;
+        }
+    
+    //  View Panel.
+        var frame_start = 0; // this is the current scroll position.
+        
+    //  This class contains the view for the right main section of timeliner
+        var tickMark1;
+        var tickMark2;
+        var tickMark3;
+            
+    //  Subdivison LOD
+    //  timeScale refers to number of pixels per unit
+    //  Eg. 1 inch - 60s, 1 inch - 60fps, 1 inch - 6 mins.    
+        function time_scaled() {
+
+        	var subDivision = 60;
+        
+        	tickMark1 = Math.round( (timeScale / subDivision) * 100 ) / 100;
+        	tickMark2 = 2 * tickMark1;
+        	tickMark3 = 10 * tickMark1;
+        
+        }
+        
+        time_scaled();
+
+    //  Timeline Panel.
+        var dpr = window.devicePixelRatio;
+        var canvas = document.createElement("canvas");
+        canvas.width = width; // * dpr;
+        canvas.height = height; // * dpr;
+        timeContainer.appendChild(canvas);
+        
+        var ctx = canvas.getContext("2d");
+    	var ctx_wrap = proxy_ctx(ctx);
+        
+        var currentTime; // measured in seconds.
+	//  Technically it could be in frames or have it in string format (0:00:00:1-60).
+	
+    	var LEFT_GUTTER = 0;
+    	var i, x, y, il, j;
+    	
+    //  PAINT.
+    
+    //  Background.
+        ctx.fillStyle = "#ffffff";
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+		ctx.save();
+		ctx.scale(dpr, dpr);
+        
+        ctx.lineWidth = 2; // options: | 0.5 | 1 | 2 |
+        
+        var units = Math.round(timeScale / tickMark1);
+		var offsetUnits = (frame_start * timeScale) % units;
+		var count = Math.ceil( width / units );
+
+    //  timeScale = pixels to 1 second (40)
+	//  tickMark1 = marks per second (marks / s)
+	//  units = pixels to every mark (40)
+        var t =  Math.floor(units * 100 / timeScale);
+    //  debugMode && console.log("t:", t);
+        
+    //  1.Labels only.
+		for (i = 0; i < count + 1; i++) {
+			x = i * units + LEFT_GUTTER - offsetUnits;
+            
+			ctx.fillStyle = "#535353";
+			ctx.textAlign = "center";
+            
+			var ti = ( t * i / 100 ).toFixed(2).replace(/\./g, ":");
+		//	debugMode && console.log("t" + i + ":", ti);
+            
+			ctx.fillText(ti, x, 50);
+		}
+
+		units = Math.round( timeScale / tickMark2 );
+		count =  Math.round( (width - LEFT_GUTTER + offsetUnits) / units );
+
+    //  2.Marker lines - main.
+		for (i = 0; i < count + 1; i++) {
+			ctx.strokeStyle = "#b8b8b8";
+			ctx.beginPath();
+			x = i * units + LEFT_GUTTER - offsetUnits;
+			ctx.moveTo(x, markerTrackHeight + 14);
+			ctx.lineTo(x, markerTrackHeight - 16);
+			ctx.stroke();
+		}
+
+		var mul = tickMark3 / tickMark2;
+		units = Math.round( timeScale / tickMark3 );
+		count =  Math.round( (width - LEFT_GUTTER + offsetUnits) / units );
+
+    //  3.Small ticks.
+        for (i = 0; i < count + 1; i++) {
+        	if (i % mul === 0) continue;
+        	ctx.strokeStyle = "#b8b8b8";
+        	ctx.beginPath();
+        	x = i * units + LEFT_GUTTER - offsetUnits;
+        	ctx.moveTo(x, markerTrackHeight + 5);
+        	ctx.lineTo(x, markerTrackHeight - 10);
+        	ctx.stroke();
+        }
+    }
+
+</script>
+
+<script>
+
+//  Before, Current, After (bca) Frame Key Indexes Array.
+    function bcaFrameKeyIndexesArray(t){
+    //  Check if frame (t) already exist in animationData.
+        var keyExists = false;
+        var keyBefore, keyIndex, keyAfter;
+        var keysArray = (animation) ? animation.data.hierarchy[0].keys : [];
+    //  var t = Number(sliderTimer.value);
+        if (keysArray.length > 0){
+            for (var j in keysArray){
+                if (keysArray[j].time < Number(t)){
+                    keyBefore = Number(j);
+                }
+                else if (keysArray[j].time == Number(t)){
+                    keyIndex = Number(j);
+                    keyExists = true;
+                }
+                else if (keysArray[j].time > Number(t)){
+                    keyAfter = Number(j);
+                    break;
+                }
+                else 
+                {
+                    var a = "DEBUG_ERROR_CAUTCH:"
+                    var b = "currentFrameKeyExists():"
+                    var c = "if (keysArray.length > 0)..."
+                    console.log( a, b, c );
+                }
+            }
+        }
+        animationDataKeyExist = keyExists;
+        bcaAnimationDataIndexKeys = [keyBefore, keyIndex, keyAfter];
+        currentAnimationKeyIndex = keyIndex;
+        //  console.log("bca keys:", bcaAnimationDataIndexKeys);
+        return bcaAnimationDataIndexKeys;
+    }
+
+//  ANIMATION PLAY.
+//  When you press a save button you can sent this animationData object to server database.
+//  Play Button handles the timeSpeed of animation.
+//  Animation is always in play mode. Never stopping.
+
+    function playAnimation(theAvatar){
+    
+        if (playButton.innerHTML == "Play"){
+            ensureLooping();
+            ensureKeysIndexing();
+            timescaleSlider.value = currentSpeed;
+            timescaleOutput.value = currentSpeed;
+            animation.play(animation.currentTime);
+            sliderTimer.value = animation.currentTime;
+            playButton.innerHTML = "Pause";
+            //document.getElementById("status-messager").innerHTML = "Playing...";
+            $("#status-messager").text("Playing...");
+            console.log("Animation is playing.");
+            
+        } else if (playButton.innerHTML == "Pause"){
+            timescaleSlider.value = 0;
+            timescaleOutput.value = currentSpeed;
+            sliderTimer.value = animation.currentTime;
+            playButton.innerHTML = "Play";
+            console.log("animation.data:", animation.data);
+            //document.getElementById("status-messager").innerHTML = "Paused";
+            $("#status-messager").text("Paused");
+            console.log("Animation paused.");
+        }
+    }
+
+    function ensureLooping(){
+        var lastkeyExists = false;
+        var z = animation.data.hierarchy[0].keys.length - 1;
+        var t = animation.data.length;
+        if (animation.data.hierarchy[0].keys[z].time == t) {
+            lastkeyExists = true;
+        }
+        for (var i in animation.data.hierarchy){
+            var posloop = animation.data.hierarchy[i].keys[0].pos;
+            var rotloop = animation.data.hierarchy[i].keys[0].rot;
+            var sclloop = animation.data.hierarchy[i].keys[0].scl;
+            var loopKeyData = {"index":z, "pos":posloop, "rot":rotloop, "scl":sclloop, "time":t};
+        //  console.log("loopKeyData:", loopKeyData);
+            if (lastkeyExists) {
+                var removedItems = 1;
+                animation.data.hierarchy[i].keys.splice(z, removedItems, loopKeyData);
+            }
+            else {
+               var removedItems = 0;
+               loopKeyData.index = animation.data.hierarchy[0].keys.length;   // index correction.
+               animation.data.hierarchy[i].keys.push(loopKeyData);
+            }
+        }
+        console.log("Ensure Looping completed.");
+    }
+
+    function ensureKeysIndexing(){
+        for (var i in animation.data.hierarchy){
+            for (var j in animation.data.hierarchy[i].keys){
+                animation.data.hierarchy[i].keys[j].index = Number(j);
+            }
+        }
+        console.log("Ensure Keys Indexing completed.");
+    }
+
+//  RESET AVATAR POSE.
+
+    function deepCopy(obj) {
+        if (Object.prototype.toString.call(obj) === "[object Array]") {
+            var out = [], i = 0, len = obj.length;
+            for ( ; i < len; i++ ) {
+                out[i] = arguments.callee(obj[i]);
+            }
+            return out;
+        }
+        if (typeof obj === "object") {
+            var out = {}, i;
+            for ( i in obj ) {
+                out[i] = arguments.callee(obj[i]);
+            }
+            return out;
+        }
+        return obj;
+    }
+
+    function avatarRestPose(theAvatar){
+    //  Check if current animation data key exist.
+        bcaFrameKeyIndexesArray( sliderTimer.value );
+    
+        if (animationDataKeyExist) {
+        //  Copy pose from user data.
+            for (var i in theAvatar.userData.restPose){
+                animation.data.hierarchy[i].keys[currentAnimationKeyIndex].pos = deepCopy( theAvatar.userData.restPose[i].pos );
+                animation.data.hierarchy[i].keys[currentAnimationKeyIndex].rot.fromArray( theAvatar.userData.restPose[i].rot );
+                animation.data.hierarchy[i].keys[currentAnimationKeyIndex].scl = deepCopy( theAvatar.userData.restPose[i].scl );
+            }
+        //  Play the frame.
+            timescaleSlider.value = 0;
+            animation.play( animation.currentTime );
+        //
+            theAvatar.visible = true;
+            armatureHelper.visible = false;
+            console.log("Animation data key reseted to rest pose.");
+        }
+        else if (!animationDataKeyExist){
+            console.log("Current animation data key does not exists.", "You can not reset to rest pose.");
+        }
+        newCurrentBoneSelected();
+    }
+
+    function bonesResetPosition(theAvatar){
+    //  Check if current animation data key exist.
+        bcaFrameKeyIndexesArray( sliderTimer.value );
+        
+        if (animationDataKeyExist) {
+        //  Reset bones position values from user data.
+            for (var i in theAvatar.userData.restPose){
+                animation.data.hierarchy[i].keys[currentAnimationKeyIndex].pos = deepCopy( theAvatar.userData.restPose[i].pos );
+            }
+        //  Play the frame.
+            timescaleSlider.value = 0;
+            animation.play( animation.currentTime );
+        //
+            theAvatar.visible = true;
+            armatureHelper.visible = false;
+            console.log("Animation data key positions reseted.");
+        }
+        else if (!animationDataKeyExist){
+            console.log("Current animation data key does not exists.", "You can not reset bones position.");
+        }
+        newCurrentBoneSelected();
+    }
+
+    function bonesResetQuaternion(theAvatar){
+    //  Check if current animation data key exist.
+        bcaFrameKeyIndexesArray( sliderTimer.value );
+        
+        if (animationDataKeyExist) {
+        //  Reset bones position values from user data.
+            for (var i in theAvatar.userData.restPose){
+                animation.data.hierarchy[i].keys[currentAnimationKeyIndex].rot.fromArray( theAvatar.userData.restPose[i].rot );
+            }
+        //  Play the frame.
+            timescaleSlider.value = 0;
+            animation.play( animation.currentTime );
+        //
+            theAvatar.visible = true;
+            armatureHelper.visible = false;
+            console.log("Animation data key rotations reseted.");
+        }
+        else if (!animationDataKeyExist){
+            console.log("Current animation data key does not exists.", "You can not reset bones rotation.");
+        }
+        newCurrentBoneSelected();
+    }
+
+    function bonesResetScale(theAvatar){
+    //  Check if current animation data key exist.
+        bcaFrameKeyIndexesArray( sliderTimer.value );
+        
+        if (animationDataKeyExist) {
+        //  Reset bones position values from user data.
+            for (var i in theAvatar.userData.restPose){
+                animation.data.hierarchy[i].keys[currentAnimationKeyIndex].scl = deepCopy( theAvatar.userData.restPose[i].scl );
+            }
+        //  Play the frame.
+            timescaleSlider.value = 0;
+            animation.play( animation.currentTime );
+        //
+            theAvatar.visible = true;
+            armatureHelper.visible = false;
+            console.log("Animation data key scales reseted.");
+        }
+        else if (!animationDataKeyExist){
+            console.log("Current animation data key does not exists.", "You can not reset bones scale.");
+        }
+        newCurrentBoneSelected();
+    }
+
+//  ANIMATION KEY FRAMES.
+
+    function deleteCurrentAnimationDataKey(){
+    //  Check if current animation data key exist.
+        bcaFrameKeyIndexesArray( sliderTimer.value );
+        
+        if ( animationDataKeyExist ){
+            for (var i in animation.data.hierarchy){
+                var removedItems = 1;
+                animation.data.hierarchy[i].keys.splice( currentAnimationKeyIndex, removedItems );
+            }
+            console.log("Current animation data key deleted.");
+        //
+            ensureLooping();
+            ensureKeysIndexing();
+            
+        //  Update current animation index key.
+            bcaFrameKeyIndexesArray( sliderTimer.value );
+            
+        //  Play the frame.
+            timescaleSlider.value = 0;
+            animation.play( animation.currentTime );
+        }
+        
+        else if (!animationDataKeyExist){
+            console.log("Current animation data key does not exists.", "Delete animation pose key aborted.");
+        }
+        
+        newCurrentBoneSelected();
+    }
+
+    function changeFrameKeyTimeDebuger(k, t){
+        for (var i in animation.data.hierarchy){
+            animation.data.hierarchy[i].keys[k].time = t;
+        }
+    }
+
+    function sortAnimationDataKeysByTime(){
+        for (var i in animation.data.hierarchy){
+        //  Sort animation data keys by time.
+            animation.data.hierarchy[i].keys.sort( function(a,b){return parseFloat(a.time) - parseFloat(b.time);} );
+        //  Ensure animation data keys indexing.
+            for (var j in animation.data.hierarchy[i].keys){
+                animation.data.hierarchy[i].keys[j].index = Number(j);
+            }
+        }
+        console.log("Sorting Animation Data Keys by time with internal Ensure Keys Indexing completed.");
+    }
+
+    function randomAnimationDataKeyGenerator(){
+    //  Check if current animation data key exist.
+        bcaFrameKeyIndexesArray( sliderTimer.value );
+        if (animationDataKeyExist) {
+        //  Generate random bones quaternion values.
+            for (var i in animation.data.hierarchy){
+                var euler = new THREE.Euler( randomRad(-180, 180), randomRad(-180, 180), randomRad(-180, 180), "XYZ" );
+                var quaternion = new THREE.Quaternion();
+                quaternion.setFromEuler( euler );
+                animation.data.hierarchy[i].keys[currentAnimationKeyIndex].rot.copy( quaternion );
+            }
+        }
+        else if (!animationDataKeyExist){
+            console.log("Current animation data key does not exists.", "You can not generate random pose key.");
+        }
+        newCurrentBoneSelected();
+    }
+
+    function randomRad(min, max) { 
+        return THREE.Math.degToRad(THREE.Math.randInt(min, max));
+    }
+
+</script>
+
+<script>
+
+//  LOAD JSON SKINNED MESH.
+
+    function loadJsonSkinnedAnimatedMesh(event){
+    //  Remove old skinnedmesh from scene.
+        if (avatar) scene.remove(avatar);
+    //  Remove old armature helper.
+        if (armatureHelper) scene.remove(armatureHelper);
+
+    //  JSON TEXT CONTENTS READER.
+        var reader = new FileReader();
+        
+    //  FileList object.
+        var file = event.target.files[0];
+        console.log("file:", file);
+        var filename = file.name;
+        console.log("filename:", filename);
+		var extension = filename.split( '.' ).pop().toLowerCase();
+		console.log("extension:", extension);
+		var name = filename.split( '.' )[0];
+		console.log("name:", name);
+		
+//      1. First we read json file as text.
+
+    //  Read json file as a text string.
+        reader.readAsText(file);
+        
+    //  When reading competed...
+        reader.onloadend = function(event){
+            //console.log(event.target.result);
+            contents = event.target.result;
+        //  Skinned Json data for skinned collection input.
+            skinnedJsonData = event.target.result;
+            //console.log("contents:", contents);
+            console.log("json contents readed as text string.");
+//      2. Then we parse json string as json data with JSON parser.
+        //  Parse json contents string as json data.
+            var data = JSON.parse( contents );
+            console.log("json contents parsed as data:", data);
+        //  Get Json contents metadata.
+            var metadata = data.metadata;
+            console.log("json metadata:", metadata);
+//      3. Last we parse again json data with a new JSONLoader to get the geometry.
+            var loader = new THREE.JSONLoader();
+            var result = loader.parse( data );
+            console.log("json data parsed with THREE.JSONLoader as JSON object {geometry, materials}.");
+            console.log("result:", result);
+            var geometry = result.geometry;
+            console.log("geometry:", geometry);
+            
+//      4. We create the materials from json results.
+            geometry.computeVertexNormals();
+	        geometry.computeBoundingBox();
+	    //
+            var material;
+			if ( result.materials !== undefined ) {
+                for ( var i = 0; i < result.materials.length; i++ ) {
+                    var originalMaterial = result.materials[ i ];
+                    originalMaterial.skinning = true;
+                }
+                if ( result.materials.length > 1 )
+					material = new THREE.MeshFaceMaterial( result.materials );
+				else 
+					material = result.materials[ 0 ];
+			} 
+            else {
+				material = new THREE.MeshStandardMaterial();
+				material.skinning = true;
+			}
+			console.log("material:", material);
+        //
+            geometry.sourceType = "ascii";
+		    geometry.sourceFile = file.name;
+		    
+//      5. We create the json skinned mesh object.
+			if ( geometry.bones && geometry.bones.length > 0 ) {
+				// var material = new THREE.MeshFaceMaterial(result.materials);
+                avatar = new THREE.SkinnedMesh(geometry, material, false);
+                avatar.name = "AVATAR";
+                avatar.position.set( 0, 0, 0 );
+                avatar.scale.set( 1, 1, 1 );
+                avatar.rotation.set( 0, 0, 0 );
+                avatar.userData.animationData = {};
+                // scene.add(avatar);
+                skins.push(avatar);
+                console.log("Avatar loaded:", avatar);
+			} 
+            else {
+                var msg = "Sorry. This is not a skinned mesh. Try to upload with Easy Meshes Upload Form.";
+                console.log(msg);
+                alert(msg);
+                return;
+			}
+			
+//      6. We add new mesh in SKIN scene.
+			scene.add(avatar);
+			console.log("avatar added in Animator scene:", scene.children);
+        //  Loading completed.
+            console.log("Loading skinned json file", filename, "completed.");
+        //  Focus Editor controls.
+            controls.focus(avatar, true);
+            
+//      7. We add all the rest things in scene.
+            armatureHelper = newSkeletonHelper(avatar);
+            scene.add(armatureHelper);
+            armatureHelper.visible = false;
+            console.log("Armature Helper created:", armatureHelper);
+        
+        //  Initialize Bones Drop list.
+            initBonesDroplist(avatar);
+            console.log("Bones droplist initialized.");
+            
+        //  Define the animationData object to create the init animation.
+            var animationData = {"name":null, "fps":null, "length":null, "hierarchy":[]};
+            animationData.name = nameAnimField.value;
+            animationData.fps = 25; //  Number(fpsSlider.value);
+            animationData.length = Number(sliderTimer.max);
+            
+        //  Prepear animationData for first init animation keys.
+
+        //  Create the init key (time:0) for every bone of avatar in animationData.hierarchy.
+            for (var i in avatar.skeleton.bones) {
+                animationData.hierarchy.push({"keys":[]});
+                var initAnimationKey = {"pos":[0,0,0], "rot":[0,0,0,1], "scl":[1,1,1], "time":0};
+                initAnimationKey.pos = avatar.skeleton.bones[i].position.toArray();
+                initAnimationKey.rot = avatar.skeleton.bones[i].quaternion.toArray();
+                initAnimationKey.scl = avatar.skeleton.bones[i].scale.toArray();
+                animationData.hierarchy[i].keys.push(initAnimationKey);
+            }
+            console.log( "Animation Data created:", animationData );
+            
+        //  Create the animation.
+            THREE.AnimationHandler.animations = [];
+            animation = new THREE.Animation( avatar, animationData );
+            animation.isPlaying = false;
+            animation.currentTime = 0;
+            timescaleSlider.value = 0;
+            playButton.innerHTML = "Play";
+            console.log("Animation created:", animation);
+        //
+            ensureLooping();
+        
+        //  Create a userData array to store rest pose.
+            avatar.userData.restPose = [];
+            
+        //  Store init key as rest pose in userData.
+            for (var i in animation.hierarchy) {
+                var restPoseKey = {"pos":[0,0,0], "rot":[0,0,0,1], "scl":[1,1,1]};
+                restPoseKey.pos = animation.hierarchy[i].position.toArray();
+                avatar.userData.restPose.push( restPoseKey );
+            }
+            console.log( "Rest pose saved:", avatar.userData.restPose );
+            
+        /*  Now that we have create the animation
+            we can get the currentBone and initialize
+            the bones values in bone adjust sliders.
+        */
+            getCurrentBone(); 
+            initBonesAdjustValues();
+            console.log("Avatar loading completed and ready to animate.");
+            
+		}
+    }
+
+    currentCrazyPosesScript = randomPoseGeneratorForMannyTheSkeletonDefaultRigged;
+
+    function randomPoseGeneratorForMannyTheSkeletonDefaultRigged(){
+        
+    //  Generate the random ik pose for every bone of MannyTheSkeletonDefaultRigged_v04.
+        var ik_Base             = new THREE.Euler( randomRad( -30,  50), randomRad( -45,  45), randomRad(   0,   0), "XYZ" );
+        var ik_Back             = new THREE.Euler( randomRad(   0,   0), randomRad(   0,   0), randomRad(   0,   0), "XYZ" );
+        
+        var ik_ScapulaRight     = new THREE.Euler( randomRad(  -8,   8), randomRad(  -2,   8), randomRad( -15,   8), "XYZ" );
+        var ik_UpperArmRight    = new THREE.Euler( randomRad(-170,  80), randomRad(   0, 100), randomRad(-105,  95), "XYZ" );
+        var ik_ForeArmRight     = new THREE.Euler( randomRad( -75,  95), randomRad( -10, 160), randomRad(  -1,   1), "XYZ" );
+        var ik_HandRight        = new THREE.Euler( randomRad(  -1,   1), randomRad( -30,  20), randomRad( -40,  70), "XYZ" );
+        
+        var ik_FingersRight     = new THREE.Euler( randomRad(   0,   0), randomRad(   0,   0), randomRad(   0,  80), "XYZ" );
+        var ik_Fingers1Right    = new THREE.Euler( randomRad(   0,   0), randomRad(   0,   0), randomRad(   0, 105), "XYZ" );
+        var ik_Fingers2Right    = new THREE.Euler( randomRad(   0,   0), randomRad(   0,   0), randomRad(   0, 110), "XYZ" );
+        var ik_ThumbRight       = new THREE.Euler( randomRad(   0,   0), randomRad(   0,   0), randomRad(   0,   0), "XYZ" );
+        var ik_Thumb1Right      = new THREE.Euler( randomRad( -40,  65), randomRad( -60,  50), randomRad( -50,  50), "XYZ" );
+        var ik_Thumb2Right      = new THREE.Euler( randomRad(   0,  90), randomRad(   0,   0), randomRad(   0,   0), "XYZ" );
+        
+        var ik_ScapulaLeft      = new THREE.Euler( randomRad(  -8,   8), randomRad(  -8,   2), randomRad(  -8,  15), "XYZ" );
+        var ik_UpperArmLeft     = new THREE.Euler( randomRad(  -8,   8), randomRad(-100,   0), randomRad( -95, 105), "XYZ" );
+        var ik_ForeArmLeft      = new THREE.Euler( randomRad( -75,  95), randomRad(-160,  10), randomRad(  -1,   1), "XYZ" );
+        var ik_HandLeft         = new THREE.Euler( randomRad(  -1,   1), randomRad( -20,  30), randomRad( -70,  40), "XYZ" );
+        
+        var ik_FingersLeft      = new THREE.Euler( randomRad(   0,   0), randomRad(   0,   0), randomRad( -80,   0), "XYZ" );
+        var ik_Fingers1Left     = new THREE.Euler( randomRad(   0,   0), randomRad(   0,   0), randomRad(-105,   0), "XYZ" );
+        var ik_Fingers2Left     = new THREE.Euler( randomRad(   0,   0), randomRad(   0,   0), randomRad(-110,   0), "XYZ" );
+        var ik_ThumbLeft        = new THREE.Euler( randomRad(   0,   0), randomRad(   0,   0), randomRad(   0,   0), "XYZ" );
+        var ik_Thumb1Left       = new THREE.Euler( randomRad( -40,  65), randomRad( -50,  60), randomRad( -50,  50), "XYZ" );
+        var ik_Thumb2Left       = new THREE.Euler( randomRad(   0,  90), randomRad(   0,   0), randomRad(   0,   0), "XYZ" );
+        
+        var ik_Chest            = new THREE.Euler( randomRad(  -1,   1), randomRad(  -1,   1), randomRad(  -1,   1), "XYZ" );
+        var ik_Hip              = new THREE.Euler( randomRad(-120,  30), randomRad( -50,  50), randomRad( -12,  12), "XYZ" );
+        
+        var ik_HipLeft          = new THREE.Euler( randomRad(  -1,   1), randomRad(  -1,   1), randomRad(  -1,   1), "XYZ" );
+        var ik_ThighLeft        = new THREE.Euler( randomRad( -90,   0), randomRad( -90,  25), randomRad( -10,  45), "XYZ" );
+        var ik_ShinLeft         = new THREE.Euler( randomRad(  -0, 130), randomRad( -30,  30), randomRad(  -1,   1), "XYZ" );
+        var ik_FootLeft         = new THREE.Euler( randomRad( -30,  30), randomRad(  -1,   1), randomRad(  -1,   1), "XYZ" );
+        var ik_ToesLeft         = new THREE.Euler( randomRad(  -1,  45), randomRad(  -1,   1), randomRad(  -1,   1), "XYZ" );
+        
+        var ik_HipRight         = new THREE.Euler( randomRad(  -1,   1), randomRad(  -1,   1), randomRad(  -1,   1), "XYZ" );
+        var ik_ThighRight       = new THREE.Euler( randomRad( -90,   0), randomRad( -25,  90), randomRad( -45,  10), "XYZ" );
+        var ik_ShinRight        = new THREE.Euler( randomRad(  -0, 130), randomRad( -30,  30), randomRad(  -1,   1), "XYZ" );
+        var ik_FootRight        = new THREE.Euler( randomRad( -30,  30), randomRad(  -1,   1), randomRad(  -1,   1), "XYZ" );
+        var ik_ToesRight        = new THREE.Euler( randomRad(  -1,  45), randomRad(  -1,   1), randomRad(  -1,   1), "XYZ" );
+        
+        var ik_Neck             = new THREE.Euler( randomRad( -15,  30), randomRad( -45,  45), randomRad( -60,  60), "XYZ" );
+        var ik_Head             = new THREE.Euler( randomRad( -45,  15), randomRad( -15,  15), randomRad( -15,  15), "XYZ" );
+        var ik_Jaw              = new THREE.Euler( randomRad(   0,  50), randomRad(  -3,   3), randomRad(  -4,   4), "XYZ" );
+    //
+        var bonesIK = [ ik_Base, ik_Back, 
+            ik_ScapulaRight, ik_UpperArmRight, ik_ForeArmRight, ik_HandRight, ik_FingersRight, ik_Fingers1Right, ik_Fingers2Right, ik_ThumbRight, ik_Thumb1Right, ik_Thumb2Right,
+            ik_ScapulaLeft, ik_UpperArmLeft, ik_ForeArmLeft, ik_HandLeft, ik_FingersLeft, ik_Fingers1Left, ik_Fingers2Left, ik_ThumbLeft, ik_Thumb1Left, ik_Thumb2Left,
+            ik_Chest, ik_Hip, ik_HipLeft, ik_ThighLeft, ik_ShinLeft, ik_FootLeft, ik_ToesLeft, ik_HipRight, ik_ThighRight, ik_ShinRight, ik_FootRight, ik_ToesRight,
+            ik_Neck, ik_Head, ik_Jaw
+        ]
+        
+    //  Check if current animation data key exist.
+        bcaFrameKeyIndexesArray( sliderTimer.value );
+        
+        function setAnimationDataKeyRotationFromEuler(euler, idx){
+            var quaternion = new THREE.Quaternion();
+            quaternion.setFromEuler( euler );
+            animation.data.hierarchy[idx].keys[currentAnimationKeyIndex].rot.copy( quaternion );
+        }
+        
+        if (animationDataKeyExist) {
+        //  Base - Body.
+            if (currentBoneIndex == 0) {
+                for (var i in bonesIK){
+                    var quaternion = new THREE.Quaternion();
+                    quaternion.setFromEuler( bonesIK[i] );
+                    animation.data.hierarchy[i].keys[currentAnimationKeyIndex].rot.copy( quaternion );
+                }
+            }
+            
+        //  Back - Upperbody.
+            else if (currentBoneIndex == 1){
+                setAnimationDataKeyRotationFromEuler( bonesIK[1], 1 );
+                setAnimationDataKeyRotationFromEuler( bonesIK[22], 22 );
+                for (var i = 2; i < 12; i++){
+                    setAnimationDataKeyRotationFromEuler( bonesIK[i], i );
+                }
+                for (var i = 12; i < 22; i++){
+                    setAnimationDataKeyRotationFromEuler( bonesIK[i], i );
+                }
+                for (var i = 34; i < 37; i++){
+                    setAnimationDataKeyRotationFromEuler( bonesIK[i], i );
+                }
+                
+            }
+            
+        //  Right upperbody limb.
+            else if (currentBoneIndex == 2){
+                setAnimationDataKeyRotationFromEuler( bonesIK[2], 2 );
+                setAnimationDataKeyRotationFromEuler( bonesIK[3], 3 );
+            }
+            else if (currentBoneIndex == 3){
+                for (var i = 3; i < 12; i++){
+                    setAnimationDataKeyRotationFromEuler( bonesIK[i], i );
+                }
+            }
+            else if (currentBoneIndex == 4){
+                for (var i = 4; i < 6; i++){
+                    setAnimationDataKeyRotationFromEuler( bonesIK[i], i );
+                }
+            }
+            else if (currentBoneIndex == 5){
+                for (var i = 5; i < 12; i++){
+                    setAnimationDataKeyRotationFromEuler( bonesIK[i], i );
+                }
+            }
+            else if (currentBoneIndex == 6){
+                setAnimationDataKeyRotationFromEuler( bonesIK[6], 6 );
+                setAnimationDataKeyRotationFromEuler( bonesIK[7], 7 );
+                setAnimationDataKeyRotationFromEuler( bonesIK[8], 8 );
+            }
+            else if (currentBoneIndex == 7){
+                setAnimationDataKeyRotationFromEuler( bonesIK[7], 7 );
+            }
+            else if (currentBoneIndex == 8){
+                setAnimationDataKeyRotationFromEuler( bonesIK[8], 8 );
+            }
+            else if (currentBoneIndex == 9){
+                setAnimationDataKeyRotationFromEuler( bonesIK[10], 10 );
+                setAnimationDataKeyRotationFromEuler( bonesIK[11], 11 );
+            }
+            else if (currentBoneIndex == 10){
+                setAnimationDataKeyRotationFromEuler( bonesIK[10], 10 );
+            }
+            else if (currentBoneIndex == 11){
+                setAnimationDataKeyRotationFromEuler( bonesIK[11], 11 );
+            }
+            
+        //  Left upperbody limb.
+            else if (currentBoneIndex == 12){
+                setAnimationDataKeyRotationFromEuler( bonesIK[12], 12 );
+                setAnimationDataKeyRotationFromEuler( bonesIK[13], 13 );
+            }
+            else if (currentBoneIndex == 13){
+                for (var i = 13; i < 22; i++){
+                    setAnimationDataKeyRotationFromEuler( bonesIK[i], i );
+                }
+            }
+            else if (currentBoneIndex == 14){
+                for (var i = 14; i < 16; i++){
+                    setAnimationDataKeyRotationFromEuler( bonesIK[i], i );
+                }
+            }
+            else if (currentBoneIndex == 15){
+                for (var i = 15; i < 22; i++){
+                    setAnimationDataKeyRotationFromEuler( bonesIK[i], i );
+                }
+            }
+            else if (currentBoneIndex == 16){
+                setAnimationDataKeyRotationFromEuler( bonesIK[16], 16 );
+                setAnimationDataKeyRotationFromEuler( bonesIK[17], 17 );
+                setAnimationDataKeyRotationFromEuler( bonesIK[18], 18 );
+            }
+            else if (currentBoneIndex == 17){
+                setAnimationDataKeyRotationFromEuler( bonesIK[17], 17 );
+            }
+            else if (currentBoneIndex == 18){
+                setAnimationDataKeyRotationFromEuler( bonesIK[18], 18 );
+            }
+            else if (currentBoneIndex == 19){
+                setAnimationDataKeyRotationFromEuler( bonesIK[20], 20 );
+                setAnimationDataKeyRotationFromEuler( bonesIK[21], 21 );
+            }
+            else if (currentBoneIndex == 20){
+                setAnimationDataKeyRotationFromEuler( bonesIK[20], 20 );
+            }
+            else if (currentBoneIndex == 21){
+                setAnimationDataKeyRotationFromEuler( bonesIK[21], 21 );
+            }
+            
+        //  Chest.
+            else if (currentBoneIndex == 22){
+                for (var i = 1; i < 37; i++){
+                    setAnimationDataKeyRotationFromEuler( bonesIK[i], i );
+                }
+            }
+            
+        //  Hip - Lowerbody body.
+            else if (currentBoneIndex == 23){
+                setAnimationDataKeyRotationFromEuler( bonesIK[23], 23 );
+                for (var i = 25; i < 29; i++){
+                    setAnimationDataKeyRotationFromEuler( bonesIK[i], i );
+                }
+                for (var i = 30; i < 34; i++){
+                    setAnimationDataKeyRotationFromEuler( bonesIK[i], i );
+                }
+            }
+            
+        //  Left lowerbody limb.
+            else if (currentBoneIndex == 24){
+                    setAnimationDataKeyRotationFromEuler( bonesIK[25], 25 );
+            }
+            else if (currentBoneIndex == 25){
+                for (var i = 25; i < 29; i++){
+                    setAnimationDataKeyRotationFromEuler( bonesIK[i], i );
+                }
+            }
+            else if (currentBoneIndex == 26){
+                for (var i = 26; i < 29; i++){
+                    setAnimationDataKeyRotationFromEuler( bonesIK[i], i );
+                }
+            }
+            else if (currentBoneIndex == 27){
+                for (var i = 27; i < 29; i++){
+                    setAnimationDataKeyRotationFromEuler( bonesIK[i], i );
+                }
+            }
+            else if (currentBoneIndex == 28){
+                setAnimationDataKeyRotationFromEuler( bonesIK[28], 28 );
+            }
+            
+        //  Right lowerbody limb.
+            else if (currentBoneIndex == 29){
+                    setAnimationDataKeyRotationFromEuler( bonesIK[30], 30 );
+            }
+            else if (currentBoneIndex == 30){
+                for (var i = 30; i < 34; i++){
+                    setAnimationDataKeyRotationFromEuler( bonesIK[i], i );
+                }
+            }
+            else if (currentBoneIndex == 31){
+                for (var i = 31; i < 34; i++){
+                    setAnimationDataKeyRotationFromEuler( bonesIK[i], i );
+                }
+            }
+            else if (currentBoneIndex == 32){
+                for (var i = 32; i < 34; i++){
+                    setAnimationDataKeyRotationFromEuler( bonesIK[i], i );
+                }
+            }
+            else if (currentBoneIndex == 33){
+                setAnimationDataKeyRotationFromEuler( bonesIK[33], 33 );
+            }
+            
+        //  Neck, Head, Jaw.
+            else if (currentBoneIndex == 34){
+                for (var i = 34; i < 37; i++){
+                    setAnimationDataKeyRotationFromEuler( bonesIK[i], i );
+                }
+            }
+            else if (currentBoneIndex == 35){
+                for (var i = 35; i < 37; i++){
+                    setAnimationDataKeyRotationFromEuler( bonesIK[i], i );
+                }
+            }
+            else if (currentBoneIndex == 36){
+                    setAnimationDataKeyRotationFromEuler( bonesIK[36], 36 );
+            }
+            
+        //  Libs.
+            else {
+                for (var i =  2; i <  6; i++){ setAnimationDataKeyRotationFromEuler( bonesIK[i], i ); }
+                for (var i = 12; i < 16; i++){ setAnimationDataKeyRotationFromEuler( bonesIK[i], i ); }
+                for (var i = 25; i < 29; i++){ setAnimationDataKeyRotationFromEuler( bonesIK[i], i ); }
+                for (var i = 30; i < 34; i++){ setAnimationDataKeyRotationFromEuler( bonesIK[i], i ); }
+                for (var i = 34; i < 37; i++){ setAnimationDataKeyRotationFromEuler( bonesIK[i], i ); }
+            }
+
+        }
+        
+        else if (!animationDataKeyExist){
+            console.log("Current animation data key does not exists.", "You can not generate random pose key.");
+            alert("Current animation data key does not exists. You can not generate random pose key. Add a new pose key and try again.");
+        }
+        
+    //  bcaFrameKeyIndexesArray( sliderTimer.value );
+        newCurrentBoneSelected();
+    }
+    
+</script>
+
+<script>
+
+//  Animation Editing.
+
+    var keymarksArray = [];
+    var currentkeymark;
+    var currentkeytime;
+    var currentkeyindex;
+
+    function insertNewAnimateDataTimeFrameKey(){
+        
+    //  Pause the animation.
+        timescaleSlider.value = 0;  
+        
+    //  Check first if animation key exists. If not, create it. Then set currentAnimationKeyIndex again.
+        bcaFrameKeyIndexesArray( sliderTimer.value );
+        var b = bcaAnimationDataIndexKeys[0];
+        var c = bcaAnimationDataIndexKeys[1];
+        var a = bcaAnimationDataIndexKeys[2];
+        
+    //  Calculate the index position to insert the new animation data key.
+        if (!animationDataKeyExist){
+            var idx, spl;
+            if ( b &&  a ) { idx = b; spl = a; }          // splice to next key index.
+            else if (!b &&  a) { idx = 0; spl = a; }      // splice to next key index.
+            else if ( b && !a) { idx = b; spl = b + 1; }  // push to end of keys array.
+            else if (!b && !a) { idx = 0; spl = 0; }      // keys array is empty. unshift to beginning of keys array.
+            
+            for (var i in animation.data.hierarchy){
+            /////////////////////////////////////////////////////////////////////////////////////////
+            //  IMPORTANT: animation.data.hierarchy[].keys[].rot WORKS ONLY WITH THREE.Quaternion  //
+            /////////////////////////////////////////////////////////////////////////////////////////
+
+            //  Create a new animation data key with current time bones values at animation.data.hierarchy[i].keys[idx].
+                var newKey = {"index":spl, "pos":[], "rot":new THREE.Quaternion(), "scl":[], "time":Number(sliderTimer.value)};
+                
+            //  Get bones values at current time from animation.hierarchy.
+                newKey.pos = animation.hierarchy[i].position.toArray();
+                newKey.rot.copy(animation.hierarchy[i].quaternion);
+                newKey.scl = animation.hierarchy[i].scale.toArray();
+                
+            //  Add new key in animation data hierarchy keys array.
+                if (spl < animation.data.hierarchy[i].keys.length) {
+                    animation.data.hierarchy[i].keys.splice(spl, 0, newKey);      // add new key before the after key.
+                } else {
+                    animation.data.hierarchy[i].keys.push(newKey);                // add new key at end of keys array.
+                }
+
+            ///////////////////////////////////////////////////////////////////////////////
+            //  IMPORTANT: Every animation data key object must have "index": property.  //
+            ///////////////////////////////////////////////////////////////////////////////
+        
+            //  Ensure keys indexing.
+                for (var j in animation.data.hierarchy[i].keys){
+                    animation.data.hierarchy[i].keys[j].index = Number(j);
+                }
+            }
+            console.log("New animation data key added at", sliderTimer.value, "sec.", animation.data.hierarchy[0]);
+            
+            ensureKeysIndexing();
+        }
+        
+    //  Update bca indexes to get the new currentAnimationKeyIndex.
+        bcaFrameKeyIndexesArray( sliderTimer.value );
+        
+    //  Get currentAnimationKeyIndex and then define currentAnimationKeyObject.
+    //  currentDataBone = animation.data.hierarchy[currentBoneIndex];
+        newCurrentBoneSelected();
+        
+        
+    //  Sort animation data keys by time.
+        for (var i in animation.data.hierarchy){
+            animation.data.hierarchy[i].keys.sort(function(a,b){return parseFloat(a.time) - parseFloat(b.time);})
+        }
+        
+    //  Delete existed keyframes handlers.
+        document.getElementById("keys-container").innerHTML = "";
+        
+    //  Create new indexed keyframes handlers.
+        for (var i in animation.data.hierarchy[0].keys){
+            newTimeKeyMarker(i);
+        }
+    }
+
+//  Create Keyframes Handler.
+
+    function newTimeKeyMarker(k){
+    //  var v = Number(document.getElementById("slider-timer").value);
+        var v = animation.data.hierarchy[0].keys[k].time;
+        var m = Number(document.getElementById("slider-timer").max);
+        
+        var keymark = document.createElement("DIV");
+    //  keymark.style.border = "1px solid #ff0";
+        keymark.class = "keymark";
+        keymark.style.position = "absolute";
+        keymark.style.backgroundColor = "#ff0";
+        keymark.style.cursor = "pointer";
+        keymark.style.color = "#000";
+        keymark.style.fontSize = "14px";
+        keymark.style.fontWeight = "bold";
+        keymark.style.padding = "1px";
+    //  keymark.style.minWidth = "1px";
+        keymark.style.width = "auto";
+        keymark.style.height = "auto";
+        keymark.style.top = "2px";
+    
+        keymark.innerHTML = animation.data.hierarchy[0].keys[k].index.toString();
+        var offset = ( 100 * v / m );  var half = ( keymark.offsetWidth / 2 );
+        keymark.style.left = offset.toFixed(2) + "%";
+        
+        debugMode && console.log("keymark style left:", keymark.style.left, "half:", half);
+
+        keymark.addEventListener("mousedown", onkeymarkMouseDown, false);
+        keymark.addEventListener("mouseenter", onkeymarkMouseEnter, false);
+        keymark.addEventListener("mouseleave", onkeymarkMouseLeave, false);
+        
+    //  Drag & Drop.
+        keyDragDrop.initElement(keymark);
+        
+        document.getElementById("keys-container").appendChild(keymark);
+        
+    //  Keymark info.
+        var keyinfo = document.createElement("DIV");
+        keyinfo.style.position = "absolute";
+    //  keyinfo.style.border = "1px solid #fff";
+        keyinfo.style.color = "#fff";
+        keyinfo.style.fontSize = "12px";
+        keyinfo.style.fontWeight = "bold";
+        keyinfo.style.top = "25px";
+        keyinfo.style.display = "block";
+        keyinfo.innerHTML = animation.data.hierarchy[0].keys[k].time.toFixed(2);
+        keyinfo.style.left = "-100%";
+        
+        keymark.appendChild(keyinfo);
+        
+        console.log("New animation key marker created at", keyinfo.innerHTML, "sec.");
+        return [keymark, keyinfo];
+    }
+
+    function onkeymarkMouseDown(){ 
+        this.style.backgroundColor = "#f00";
+        //console.log(this);
+        currentkeymark = this;
+        //console.log("currentkeymark:", currentkeymark);
+        currentkeytime = this.children[1];
+        //console.log("currentkeytime:", currentkeytime);
+        
+    //  Find corresponding Frame key before you add listeners.
+        
+        for (var i=0; i < document.getElementById("keys-container").children.length; i++){
+            if (this == document.getElementById("keys-container").children[i]){
+                currentkeyindex = i;
+                break;
+            }
+        }
+        
+        console.log("currentkeyindex:", currentkeyindex);
+        
+    //  Ensure keys index.
+    //  ensureKeysIndexing();
+        
+        document.addEventListener("mousemove", onkeymarkMouseMove, false);
+        document.addEventListener("mouseup", onkeymarkMouseUp, false);
+        
+        var t = (currentkeymark.offsetLeft / keyscontainer.offsetWidth) * ( sliderTimer.max );
+        
+        if (t > Number(sliderTimer.max)) {
+            t = Number(sliderTimer.max);
+        }
+        t = Number(t.toFixed(2));
+        currentkeytime.innerHTML = t;
+    }
+
+    function onkeymarkMouseEnter(){ 
+        this.style.backgroundColor = "#0f0";
+    }
+    
+    function onkeymarkMouseLeave(){ 
+        this.style.backgroundColor = "#ff0";
+    }
+
+    function onkeymarkMouseMove(){
+        //currentkeytime.innerHTML = currentkeytime.parentElement.style.left;
+        var t = (currentkeytime.parentElement.offsetLeft / keyscontainer.offsetWidth) * ( sliderTimer.max );
+        if (t > Number(sliderTimer.max)) {
+            t = Number(sliderTimer.max);
+        }
+        t = Number(t.toFixed(2));
+        currentkeytime.innerHTML = t;
+    }
+
+    function onkeymarkMouseUp(){
+        
+    //  Update animation.data.hierarchy[i].keys[currentkeyindex].time.
+        var t = Number(currentkeytime.innerHTML);
+        console.log("currentkeytime", "=", t);
+        
+        for (var i in animation.data.hierarchy){
+            animation.data.hierarchy[i].keys[currentkeyindex].time = t;
+        //  Sort animation keys by time.
+            animation.data.hierarchy[i].keys.sort( function(a,b){
+                return parseFloat(a.time) - parseFloat(b.time);
+            })
+        }
+        
+    //  Ensure keys index.
+        ensureKeysIndexing();
+        
+    //  Remove event listeners.
+        var keymarks = document.getElementById("keys-container").children;
+        console.log("keymarks:", keymarks);
+        for (var i in keymarks){
+            console.log("keymarks[", i, "]:", keymarks[i]);
+            var keymark = keymarks[i];
+            console.log("keymark:", keymark);
+            if (keymark == keymarks.length) {
+                console.log("keymark == keymarks.length:", keymark == keymarks.length);
+                break;
+            }
+            keymark.removeEventListener("mousedown", onkeymarkMouseDown);
+            keymark.removeEventListener("mouseenter", onkeymarkMouseEnter);
+            keymark.removeEventListener("mouseleave", onkeymarkMouseLeave);
+        }
+        console.log("==end of loop==");
+        
+    //  Delete existed keyframes handlers.
+        document.getElementById("keys-container").innerHTML = "";
+        
+    //  Create new indexed keyframes handlers.
+        for (var i in animation.data.hierarchy[0].keys){
+            newTimeKeyMarker(i);
+        }
+        
+    //  Initialize current key variables.
+        currentkeymark = undefined;
+        currentkeytime = undefined;
+        currentkeyindex = undefined;
+        
+    //  Remove event listeners.
+        document.removeEventListener("mousemove", onkeymarkMouseMove);
+        document.removeEventListener("mouseup", onkeymarkMouseUp);
+    }
+
+//  Submit User Sliders values.
+
+    function submitNewPositionValue(){
+
+    //  insertNewAnimateDataTimeFrameKey();
+        
+    //  Submit value to object.
+        currentDataBone.keys[currentAnimationKeyIndex].pos[0] += Number( posSliderX.value );     // number
+        currentDataBone.keys[currentAnimationKeyIndex].pos[1] += Number( posSliderY.value );     // number
+        currentDataBone.keys[currentAnimationKeyIndex].pos[2] += Number( posSliderZ.value );     // number
+        
+    //  Play the frame.
+        timescaleSlider.value = 0;
+        animation.play( animation.currentTime );
+        
+    //  Return value to output.
+        posOutputX.value = currentBone.position.x.toFixed(0);     // string
+        posOutputY.value = currentBone.position.y.toFixed(0);     // string
+        posOutputZ.value = currentBone.position.z.toFixed(0);     // string
+    }
+
+    function reverseSubmitPositionValue(){
+    //  Return value to output.
+        if (animation){
+            posOutputX.value = currentBone.position.x.toFixed(0);     // string
+            posOutputY.value = currentBone.position.y.toFixed(0);     // string
+            posOutputZ.value = currentBone.position.z.toFixed(0);     // string
+        }
+    }
+
+    function submitNewRotationValue(){
+        
+    //  insertNewAnimateDataTimeFrameKey();
+        
+    //  Get rotation from current bone.
+        var x = currentBone.rotation._x;
+        var y = currentBone.rotation._y;
+        var z = currentBone.rotation._z;
+        
+        x += THREE.Math.degToRad( Number( rotSliderX.value ) );
+        y += THREE.Math.degToRad( Number( rotSliderY.value ) );
+        z += THREE.Math.degToRad( Number( rotSliderZ.value ) );
+        
+        var euler = new THREE.Euler(x, y, z, "XYZ");
+        
+        var quaternion = new THREE.Quaternion();
+        
+        quaternion.setFromEuler( euler );
+        
+        currentDataBone.keys[ currentAnimationKeyIndex ].rot.copy( quaternion );
+    
+    //  Play the frame.
+        timescaleSlider.value = 0;
+        animation.play( animation.currentTime );
+        
+    //  Return value to output.
+        var xrad = currentBone.rotation._x;                      // number rad
+        var yrad = currentBone.rotation._y;                      // number rad
+        var zrad = currentBone.rotation._z;                      // number rad
+        rotOutputX.value = THREE.Math.radToDeg(xrad).toFixed(0); // string degrees
+        rotOutputY.value = THREE.Math.radToDeg(yrad).toFixed(0); // string degrees
+        rotOutputZ.value = THREE.Math.radToDeg(zrad).toFixed(0); // string degrees
+    }
+
+    function reverseSubmitRotationValue(){
+    //  Return value to output.
+        if (animation){
+            var xrad = currentBone.rotation._x;                      // number rad
+            var yrad = currentBone.rotation._y;                      // number rad
+            var zrad = currentBone.rotation._z;                      // number rad
+            rotOutputX.value = THREE.Math.radToDeg(xrad).toFixed(0); // string degrees
+            rotOutputY.value = THREE.Math.radToDeg(yrad).toFixed(0); // string degrees
+            rotOutputZ.value = THREE.Math.radToDeg(zrad).toFixed(0); // string degrees
+        }
+    }
+
+    function submitStaticRotationValue(){
+    
+    //  insertNewAnimateDataTimeFrameKey();
+        var x = THREE.Math.degToRad( Number( rotSliderX.value ) );
+        var y = THREE.Math.degToRad( Number( rotSliderY.value ) );
+        var z = THREE.Math.degToRad( Number( rotSliderZ.value ) );
+        
+        var euler = new THREE.Euler(x, y, z, "XYZ");
+        var quaternion = new THREE.Quaternion();
+        quaternion.setFromEuler( euler );
+        currentDataBone.keys[ currentAnimationKeyIndex ].rot.copy( quaternion );
+    
+    //  Play the frame.
+        timescaleSlider.value = 0;
+        animation.play( animation.currentTime );
+        
+    //  Return value to output.
+        var xrad = currentBone.rotation._x;                      // number rad
+        var yrad = currentBone.rotation._y;                      // number rad
+        var zrad = currentBone.rotation._z;                      // number rad
+        
+    //  Always return first rotation y because of quaternion.
+        rotOutputY.value = THREE.Math.radToDeg(yrad).toFixed(0); // string degrees
+        rotOutputX.value = THREE.Math.radToDeg(xrad).toFixed(0); // string degrees
+        rotOutputZ.value = THREE.Math.radToDeg(zrad).toFixed(0); // string degrees
+    }
+
+    function reverseSubmitStaticRotationValue(){
+    //  Return value to output.
+        if (animation){
+            var xrad = currentBone.rotation._x;                      // number rad
+            var yrad = currentBone.rotation._y;                      // number rad
+            var zrad = currentBone.rotation._z;                      // number rad
+            
+        //  Always return first rotation y because of quaternion.
+            rotOutputY.value = THREE.Math.radToDeg(yrad).toFixed(0); // string degrees
+            rotOutputX.value = THREE.Math.radToDeg(xrad).toFixed(0); // string degrees
+            rotOutputZ.value = THREE.Math.radToDeg(zrad).toFixed(0); // string degrees
+            
+        //  Always return first rotation y because of quaternion.
+            rotSliderY.value = Number(rotOutputY.value);             // number degrees
+            rotSliderX.value = Number(rotOutputX.value);             // number degrees
+            rotSliderZ.value = Number(rotOutputZ.value);             // number degrees
+        }
+    }
+
+    function submitNewScaleValue(){
+    
+    //  insertNewAnimateDataTimeFrameKey();
+        
+    //  Submit value to object.
+        var sx = Number( sclSliderX.value ); // number
+        var sy = Number( sclSliderY.value ); // number
+        var sz = Number( sclSliderZ.value ); // number
+        sx = Number(sx.toFixed(3));          // number
+        sy = Number(sy.toFixed(3));          // number
+        sz = Number(sz.toFixed(3));          // number
+        
+    //  currentDataBone.keys[currentAnimationKeyIndex].scl[0]
+        currentDataBone.keys[currentAnimationKeyIndex].scl[0] *= sx;    // number
+        currentDataBone.keys[currentAnimationKeyIndex].scl[1] *= sy;    // number
+        currentDataBone.keys[currentAnimationKeyIndex].scl[2] *= sz;    // number
+        
+    //  Play the frame.
+        timescaleSlider.value = 0;
+        animation.play( animation.currentTime );
+        
+    //  Return value to output.
+        sx = currentBone.scale.x * 100;      // number
+        sy = currentBone.scale.y * 100;      // number
+        sz = currentBone.scale.z * 100;      // number
+        sclOutputX.value = sx.toFixed(1);    // string
+        sclOutputY.value = sy.toFixed(1);    // string
+        sclOutputZ.value = sz.toFixed(1);    // string
+        sclUniformOutput.value = sclOutputY.value;
+    }
+
+    function reverseSubmitScaleValue(){
+    //  Return value to output.
+        if (animation){
+            sx = currentBone.scale.x * 100;      // number
+            sy = currentBone.scale.y * 100;      // number
+            sz = currentBone.scale.z * 100;      // number
+            sclOutputX.value = sx.toFixed(1);    // string
+            sclOutputY.value = sy.toFixed(1);    // string
+            sclOutputZ.value = sz.toFixed(1);    // string
+            sclUniformOutput.value = sclOutputY.value;
+        }
+    }
+
+    function submitUniformScaleValue(){
+    
+    //  insertNewAnimateDataTimeFrameKey();
+        
+    //  Submit value to object.
+        var s = Number( sclUniformSlider.value );
+        //s = s * currentDataBone.keys[currentAnimationKeyIndex].scl[1];
+        s = Number(s.toFixed(3));
+        
+        currentDataBone.keys[currentAnimationKeyIndex].scl[0] *= s; // number
+        currentDataBone.keys[currentAnimationKeyIndex].scl[1] *= s; // number
+        currentDataBone.keys[currentAnimationKeyIndex].scl[2] *= s; // number
+        
+    //  Play the frame.
+        timescaleSlider.value = 0;
+        animation.play( animation.currentTime );
+        
+    //  Return value to output.
+        s = currentBone.scale.y * 100;
+        sclUniformOutput.value = s.toFixed(1); // string
+        sclOutputX.value = s.toFixed(1);       // string
+        sclOutputY.value = s.toFixed(1);       // string
+        sclOutputZ.value = s.toFixed(1);       // string
+    }
+
+    function submitNewDurationValue(){
+        var value = Number(sliderTimer.value);
+        var min = 1;
+        var max = 5;
+        var d = Number(durSlider.value);        // number
+        d = Number(sliderTimer.max) + d;    // number
+        
+        if (d > min && d < max) {
+        //  Submit value to object.
+            sliderTimer.max = d.toFixed(1); // string
+        //  Return value to output.
+            d = Number(sliderTimer.max);    // number
+            durOutput.value = d;                // number
+
+        } else if (d < min) {
+            sliderTimer.max = min;          // number
+            durOutput.value = min;              // number
+
+        } else if (d > max) {
+            sliderTimer.max = max;          // number
+            durOutput.value = max;              // number
+        }
+        sliderTimer.value = 0;              // number
+        sliderTimer.value = value;          // number
+        outputTimer.value = value;          // number
+    }
+
+    function submitAnimationName(){
+        animation.data.name = document.getElementById(animationname).value;
+    }
+
+//  INITIALAZE DURATION OUTPUT VALUE.
+    function initAnimatorAdjustValues() {
+        var duration = Number(sliderTimer.max);
+        durOutput.value = duration;
+    }
+
+//  FINE TUNE
+    function fineTuneSliderUp(slider){
+        var n = Number(slider.step);
+        slider.stepUp(n);
+    }
+
+    function fineTuneSliderDown(slider){
+        var n = Number(slider.step);
+        slider.stepDown(n);
+    }
+
+</script>
+
+<script>
+    
+//  Animator Scene.
+
+    var animator3JsInitialized = false;
+    var skinnedmeshFilepath = "models/json/skinned/MannyTheSkeletonDefaultRigged_v04.js";
+    var skydomeFilepath = "/skydomes/skydome.jpg";
+
+//  Define animation object.
+    var animationsHandler = THREE.AnimationHandler.animations;   //  array
+
+    if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+
+    var avatar;
+    var animation;
+    var normals;
+    var morphs = [];
+    var skins = [];
+
+    mesh = null;
+    group = null;
+    SELECTED = null;
+
+    var seaLevel = 0;
+    var frameCount = 0;
+    var stepFrequency = 60;
+    var mouse = new THREE.Vector2();
+
+    var armature;
+    var armatureHelper;
+    var axisCustomHelper;
+    var originAxisHelper;
+
+    var skyboxposxSelector = "#skybox-posx";
+    var skyboxnegxSelector = "#skybox-negx";
+    var skyboxposySelector = "#skybox-posy";
+    var skyboxnegySelector = "#skybox-negy";
+    var skyboxposzSelector = "#skybox-posz";
+    var skyboxnegzSelector = "#skybox-negz";
+    
+    var posx = $(skyboxposxSelector)[0];
+    var negx = $(skyboxnegxSelector)[0];
+    var posy = $(skyboxposySelector)[0];
+    var negy = $(skyboxnegySelector)[0];
+    var posz = $(skyboxposzSelector)[0];
+    var negz = $(skyboxnegzSelector)[0];
+    var cubemap = [posx, negx, posy, negy, posz, negz];
+    
+//    container = $(rendererSelector)[0];
+
+    init( container );
+    animate();
+
+    function init( container ){
+        scene = new THREE.Scene();
+    //  scene.fog = new THREE.FogExp2( 0x000000, 0.0001 );
+        
+        near = 1; far = 100000;
+        camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, near, far );
+        camera.position.set( 60, 11, -113 );
+        camera.rotation.set( 0, 0, 0 );
+        camera.name = "CAMERA" ;
+
+        sceneLights = newDirectionalLightsGroup(0xffffff, 1000, 1000, 1000, 0.5);
+
+        controls = new THREE.EditorControls( camera );
+
+    //  Skybox.
+    //  scene.background = new THREE.CubeTexture( cubemap );
+    //  scene.background.needsUpdate = true;
+
+	//  Skydome.
+        var loader = new THREE.TextureLoader();
+		skydome = new THREE.Mesh(
+			new THREE.SphereGeometry( far * 0.1, 15, 15 ),
+			new THREE.MeshBasicMaterial({
+				map: loader.load( skydomeFilepath ),
+				color: 0xffffff,
+				side: THREE.DoubleSide
+			})
+		);
+		skydome.rotation.y = Math.PI;
+		skydome.scale.set(-1, 2, 1);
+	//	scene.add( skydome );
+
+        groundHelper = newGroundHelper();
+        groundHelper.visible = true;
+        
+        axisCustomHelper = newCustomAxisHelper(1200);
+        axisOriginHelper = newOriginAxisHelper(1200);
+
+        projector = new THREE.Projector();
+        keyboard = new KeyboardState();
+        clock = new THREE.Clock();
+
+    //  Renderer.
+        renderer = new THREE.WebGLRenderer({ 
+            antialias:true, 
+            preserveDrawingBuffer:true,
+            autoClear:true
+        });
+        renderer.shadowMapEnabled = true;
+        renderer.setPixelRatio( window.devicePixelRatio );
+        renderer.setSize( window.innerWidth, window.innerHeight ); 
+        container.appendChild( renderer.domElement );
+
+        window.addEventListener( "resize", onWindowResize, false );
+        document.addEventListener( "mousedown", onDocumentMouseDown, false );
+        document.addEventListener( "mouseup", onDocumentMouseUp, false );
+        document.addEventListener( "mousemove", onDocumentMouseMove, false );
+
+    //  Manny The Skeleton Default Rigged Mesh.
+        loadSkinnedAnimatedMesh(skinnedmeshFilepath, 1);
+
+    //  Animator Inits.
+        initAnimatorAdjustValues();
+
+    //  Timeliner Inits.
+        initTimeLiner();
+
+    //  Initialize flag.
+        animator3JsInitialized = true;
+        console.log("Animator Editor scene initialized.");
+    }
+
+    function animate(){
+        requestAnimationFrame( animate );
+        render();
+        frameCount++ ;
+        update();
+    //  cameraPropertiesCapture();
+    }
+
+    function render(){
+        renderer.render( scene, camera );
+    }
+
+    function onWindowResize() {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize( window.innerWidth, window.innerHeight );
+    //  Repaint timeliner.
+        initTimeLiner();
+    }
+
+    function onDocumentMouseMove( event ) {
+        mouse.x =   ( event.clientX / window.innerWidth ) * 2 - 1;
+        mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+    }
+
+    function onDocumentMouseDown( event ) {
+        mouse.x =   ( event.clientX / window.innerWidth ) * 2 - 1;
+        mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+
+        bcaFrameKeyIndexesArray( sliderTimer.value );
+        newCurrentBoneSelected();
+
+        if ( playManual.checked ) {
+            timescaleSlider.value = currentSpeed;
+            timescaleOutput.value = currentSpeed;
+        }
+    }
+    
+    function onDocumentMouseUp( event ) {
+        mouse.x =   ( event.clientX / window.innerWidth ) * 2 - 1;
+        mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+
+        if ( playManual.checked ) {
+            timescaleSlider.value = 0;
+            timescaleOutput.value = currentSpeed;
+        }
+    }
+
+    function update() {
+
+        var delta = clock.getDelta();
+        var time = clock.getElapsedTime();
+        if (keyboard) keyboard.update( delta );
+
+        if (currentSliderStatus){
+        
+        //  Animator Timer Slider.
+            if (currentSlider == sliderTimer) {
+                animationTimerSlider();
+            }
+            
+        //  Animator Adjust Slider.
+            animationAdjustSliders();
+
+        //  Animation Adjust Uniform Scale slider.
+            if (currentSlider == sclUniformSlider) {
+                submitUniformScaleValue();
+            }
+            
+        //  Animation duration slider.
+            if (currentSlider == durSlider) {
+                submitNewDurationValue();
+            }
+            
+        } else {
+        
+            reverseSubmitPositionValue();
+            reverseSubmitStaticRotationValue();
+            reverseSubmitScaleValue();
+        }
+
+        if (animation) {
+        
+        //  Pause.
+            if ( Number(timescaleSlider.value) == 0 ) {
+                playButton.innerHTML = "Play";
+                groundHelper.visible = true;
+                axisCustomHelper.visible = true;
+            }
+
+        //  Play.
+            if ( Number(timescaleSlider.value)  > 0 ) {
+                playButton.innerHTML = "Pause";
+                groundHelper.visible = false;
+                axisCustomHelper.visible = false;
+            }
+
+        //  Play only at mouse down.
+            if ( !loopCheckbox.checked ){
+                if (animation.currentTime > animation.data.length){
+                    timescaleSlider.value = 0;
+                    timescaleOutput.value = currentSpeed;
+                    sliderTimer.value = 0;
+                    outputTimer.value = 0;
+                    animation.currentTime = 0;
+                    playButton.innerHTML = "Play";
+                    animation.play(0);
+                }
+            }
+
+        //  Animation playing.
+            if (animation.isPlaying){
+                animation.loop = loopCheckbox.checked;
+                //  animation.fps = Number(fpsSlider.value);
+                animation.timeScale = Number(timescaleSlider.value);
+                sliderTimer.value = animation.currentTime;
+                outputTimer.value = sliderTimer.value;
+            }
+        }
+
+    //  Animation speed playing.
+        if (timescaleSlider.value > 0) {
+            currentSpeed = Number(timescaleSlider.value);
+        }
+        
+    //  Before, Current, and After keyframes.
+        bcaFrameKeyIndexesArray( sliderTimer.value );
+
+    //  Animation Time keyframe color.
+        if (animationDataKeyExist) {
+            outputTimer.style.color = "#f00";
+        } else {
+            outputTimer.style.color = "#fff";
+        }
+
+    //  Armature Skeleton update.
+        if (armatureHelper) armatureHelper.update();
+
+    //  Animation Handler update.
+        THREE.AnimationHandler.update( delta );
+        
+    //  BVH Animations.
+        if (mixer) mixer.update(delta);
+		if (skeletonHelper) skeletonHelper.update();
+
+    }
+
+//  LOAD INITIAL ANIMATION SKINNED MESH.
+
+    function loadSkinnedAnimatedMesh(url, scale){
+    //  Remove old avatar from scene.
+        if (avatar) scene.remove(avatar);
+    //  Remove old armature helper.
+        if (armatureHelper) scene.remove(armatureHelper);
+        
+    //  Load Skinned Armatured Mesh.
+        var loader = new THREE.JSONLoader();
+        loader.load( url, function(geometry, materials){
+            geometry.computeVertexNormals();
+	        geometry.computeBoundingBox();
+        //
+	        for ( var i = 0, il = materials.length; i < il; i ++ ) {
+                var originalMaterial = materials[ i ];
+                originalMaterial.skinning = true;
+            }
+        //
+            var material = new THREE.MeshFaceMaterial(materials);
+            avatar = new THREE.SkinnedMesh(geometry, material, false);
+            avatar.name = "AVATAR";
+            avatar.position.set( 0, 0, 0 );
+            avatar.scale.set( scale, scale, scale );
+            avatar.rotation.set( 0, 0, 0 );
+            avatar.userData.animationData = {};
+            scene.add(avatar);
+            skins.push(avatar);
+            controls.focus(avatar, true);
+            console.log("Avatar loaded:", avatar);
+        //
+            armatureHelper = newSkeletonHelper(avatar);
+            scene.add(armatureHelper);
+            armatureHelper.visible = false;
+            console.log("Armature Helper created:", armatureHelper);
+        
+        //  Initialize Bones Drop list.
+            initBonesDroplist(avatar);
+            console.log("Bones droplist initialized.");
+            
+        //  Define the animationData object to create the init animation.
+            var animationData = {"name":null, "fps":null, "length":null, "hierarchy":[]};
+            animationData.name = nameAnimField.value;
+            //  animationData.fps = Number(fpsSlider.value);
+            animationData.length = Number(sliderTimer.max);
+            
+        
+        //  Prepear animationData for first init animation keys.
+
+        //  Create the init key (time:0) for every bone of avatar in animationData.hierarchy.
+            for (var i in avatar.skeleton.bones) {
+                animationData.hierarchy.push({"keys":[]});
+                var initAnimationKey = {"pos":[0,0,0], "rot":[0,0,0,1], "scl":[1,1,1], "time":0};
+                initAnimationKey.pos = avatar.skeleton.bones[i].position.toArray();
+                initAnimationKey.rot = avatar.skeleton.bones[i].quaternion.toArray();
+                initAnimationKey.scl = avatar.skeleton.bones[i].scale.toArray();
+                animationData.hierarchy[i].keys.push(initAnimationKey);
+            }
+            console.log( "Animation Data created:", animationData );
+            
+        //  Create the animation.
+            THREE.AnimationHandler.animations = [];
+            animation = new THREE.Animation( avatar, animationData );
+            animation.isPlaying = false;
+            animation.currentTime = 0;
+            timescaleSlider.value = 0;
+            playButton.innerHTML = "Play";
+            console.log("Animation created:", animation);
+        //
+            ensureLooping();
+        
+        //  Create a userData array to store rest pose.
+            avatar.userData.restPose = [];
+            
+        //  Store init key as rest pose in userData.
+            for (var i in animation.hierarchy) {
+                var restPoseKey = {"pos":[0,0,0], "rot":[0,0,0,1], "scl":[1,1,1]};
+                restPoseKey.pos = animation.hierarchy[i].position.toArray();
+                avatar.userData.restPose.push( restPoseKey );
+            }
+            console.log( "Rest pose saved:", avatar.userData.restPose );
+            
+        //  Now that we have create the animation
+        //  we can get the currentBone and initialize
+        //  the bones values in bone adjust sliders.
+        
+            getCurrentBone(); 
+            initBonesAdjustValues();
+            console.log("Avatar loading completed and ready to animate.");
+        });
+    }
+
+    function loadTexture( url, mapping, onLoad, onError ) {
+        var loader = new THREE.TextureLoader();
+        loader.setCrossOrigin( undefined );
+        var texture = loader.load( url, onLoad, undefined, onError );
+        if ( mapping ) texture.mapping = mapping;
+        function onLoad(){
+        //  texture.needsUpdate = true;
+        }
+        return texture;
+    }
+
+</script>
+
+<script>
+/*
+    function newSkeletonHelper(target){
+    //  Create the skeleton helper debug visualization
+		var helper = new THREE.SkeletonHelper(target);
+		helper.material.linewidth = 5;
+		helper.name = "ARMATURE_HELPER";
+		helper.visible = true;
+		return helper;
+    }
+*/
+</script>
+
+<input name="animation" type="hidden">
+
+</body>
+</html>
